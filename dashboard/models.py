@@ -22,6 +22,8 @@ class Dissemination(models.Model):
         return self.event + self.title + self.startdate + self.orgEN + self.partner
 
 
+
+
 class Partner(models.Model):
     index = models.IntegerField(default=None)
     country = models.CharField(max_length=100, blank=True)
@@ -118,13 +120,99 @@ class ExtensionAgents(models.Model):
         return self.firstname + ' ' + self.lastname + ' ' + self.org
 
 
+class Events(models.Model):
+    index = models.IntegerField(default=0)
+    firstname = models.CharField(max_length=100, blank=True, null=True)
+    lastname = models.CharField(max_length=100, null=True, blank=True)
+    designation = models.CharField(max_length=100, null=True, blank=True)
+    gender = models.CharField(max_length=100, null=True, blank=True)
+    phone_no = models.CharField(max_length=20, null=True, blank=True)
+    org = models.CharField(max_length=100, null=True)
+    country = models.CharField(max_length=100, null=True, blank=True)
+    event = models.CharField(max_length=100, null=True, blank=True)
+    partner = models.CharField(max_length=100, null=True, blank=True)
+    partner_original = models.CharField(max_length=100, null=True, blank=True)
+    hasc1 = models.CharField(max_length=120, null=True)
+    hasc2 = models.CharField(max_length=120, null=True)
+    city = models.CharField(max_length=100, null=True)
+    venue = models.CharField(max_length=100, null=True)
+    lat = models.CharField(max_length=100, null=True)
+    lon = models.CharField(max_length=100, null=True)
+    date_added = models.DateField(null=True, blank=True)
+    startdate = models.DateField(null=True, blank=True)
+    enddate = models.DateField(null=True, blank=True)
+    usecase = models.CharField(max_length=50, null=True, blank=True)
+    format = models.CharField(max_length=50, null=True, blank=True)
+    titlefull = models.CharField(max_length=255, null=True, blank=True)
+    title = models.CharField(max_length=255, null=True, blank=True)
+    topics = models.CharField(max_length=255, null=True, blank=True)
+    services = models.CharField(max_length=100, null=True)
+    input_type = models.CharField(max_length=100, null=True, blank=True)
+    input_orgs = models.CharField(max_length=100, null=True, blank=True)
+    credit_types = models.CharField(max_length=100, null=True, blank=True)
+    credit_orgs = models.CharField(max_length=100, null=True, blank=True)
+    market_type = models.CharField(max_length=100, null=True, blank=True)
+    market_orgs = models.CharField(max_length=100, null=True)
+    paper = models.CharField(max_length=100, null=True)
+    app = models.BooleanField(default=False, null=True)
+    viamo = models.BooleanField(default=False, null=True)
+    arifu = models.BooleanField(default=False, null=True)
+    fr = models.BooleanField(default=False, null=True)
+    ic = models.BooleanField(default=False, null=True)
+    wm_pp = models.BooleanField(default=False, null=True)
+    sp_hs = models.BooleanField(default=False, null=True)
+    input = models.BooleanField(default=False, null=True)
+    credit = models.BooleanField(default=False, null=True)
+    market = models.BooleanField(default=False, null=True)
+    fertilizer_supply = models.BooleanField(default=False, null=True)
+    herbicide_supply = models.BooleanField(default=False, null=True)
+    cuttings_supply = models.BooleanField(default=False, null=True)
+    mechanization = models.BooleanField(default=False, null=True)
+    indirect_financial = models.BooleanField(default=False, null=True)
+    individual_credit = models.BooleanField(default=False, null=True)
+    group_lending = models.BooleanField(default=False, null=True)
+    intermediary_credit = models.BooleanField(default=False, null=True)
+    market_information = models.BooleanField(default=False, null=True)
+    market_access = models.BooleanField(default=False, null=True)
+    crop_insurance = models.BooleanField(default=False, null=True)
+
+    def __str__(self):
+        return self.firstname + ' ' + self.lastname + ' ' + self.partner + ' ' + self.title + ' ' + self.venue
 
 
 
 
 
+class EventParticipants(models.Model):
+    index = models.IntegerField(default=0)
+    partner = models.CharField(max_length=100, blank=True, null=True)
+    participant = models.CharField(max_length=100, blank=True, null=True)
+    gender = models.CharField(max_length=100, blank=True, null=True)
+    no_participants = models.IntegerField()
+
+    def __str__(self):
+        return self.partner + ' ' + self.participant + ' ' + self.no_participants
 
 
+class Farmers(models.Model):
+    index = models.IntegerField(default=0)
+    partner = models.CharField(max_length=100, blank=True, null=True)
+    firstname = models.CharField(max_length=100, blank=True, null=True)
+    lastname = models.CharField(max_length=100, blank=True, null=True)
+    gender = models.CharField(max_length=100, blank=True, null=True)
+    phone_no = models.CharField(max_length=100, blank=True, null=True)
+    own_phone = models.BooleanField(default=False, null=True)
+    crops = models.CharField(max_length=50, null=True, blank=True)
+    crops_other = models.CharField(max_length=50, null=True)
+    farm_area = models.DecimalField(decimal_places=2, max_digits=2, null=True)
+    area_unit = models.CharField(max_length=50, null=True, blank=True)
+    cassava = models.BooleanField(default=False, null=True)
+    yam = models.BooleanField(default=False, null=True)
+    maize = models.BooleanField(default=False, null=True)
+    rice = models.BooleanField(default=False, null=True)
+    sorghum = models.BooleanField(default=False, null=True)
 
-
+    def __str__(self):
+        return self.firstname + ' ' + self.lastname + ' ' + self.crops + ' ' + self.farm_area + ' ' + self.area_unit
+    
 
