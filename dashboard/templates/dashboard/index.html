@@ -496,10 +496,10 @@
                         <div class="row">
                           <div class="col-md-12 col-xl-3 d-flex flex-column justify-content-start">
                             <div class="ml-xl-4 mt-3">
-                            <p class="card-title">Detailed Reports</p>
-                              <h1 class="text-primary">$34040</h1>
-                              <h3 class="font-weight-500 mb-xl-4 text-primary">North America</h3>
-                              <p class="mb-2 mb-xl-0">The total number of sessions within the date range. It is the period time a user is actively engaged with your website, page or app, etc</p>
+                            <p class="card-title">Events Participation</p>
+                              <h1 class="text-primary">...</h1>
+                              <h3 class="font-weight-500 mb-xl-4 text-primary">Nigeria</h3>
+                              <p class="mb-2 mb-xl-0">Top partners with high impact events.</p>
                             </div>  
                             </div>
                           <div class="col-md-12 col-xl-9">
@@ -576,10 +576,10 @@
                         <div class="row">
                           <div class="col-md-12 col-xl-3 d-flex flex-column justify-content-start">
                             <div class="ml-xl-4 mt-3">
-                            <p class="card-title">Detailed Reports</p>
-                              <h1 class="text-primary">$34040</h1>
-                              <h3 class="font-weight-500 mb-xl-4 text-primary">North America</h3>
-                              <p class="mb-2 mb-xl-0">The total number of sessions within the date range. It is the period time a user is actively engaged with your website, page or app, etc</p>
+                            <p class="card-title">Event Participation</p>
+                              <h1 class="text-primary">...</h1>
+                              <h3 class="font-weight-500 mb-xl-4 text-primary">Nigeria</h3>
+                              <p class="mb-2 mb-xl-0">Top partners with high impact events.</p>
                             </div>  
                             </div>
                           <div class="col-md-12 col-xl-9">
@@ -670,60 +670,26 @@
             <div class="col-md-7 grid-margin stretch-card">
               <div class="card">
                 <div class="card-body">
-                  <p class="card-title mb-0">Top Products</p>
+                  <p class="card-title mb-0">Top Partners</p>
                   <div class="table-responsive">
                     <table class="table table-striped table-borderless">
                       <thead>
                         <tr>
-                          <th>Product</th>
-                          <th>Price</th>
-                          <th>Date</th>
-                          <th>Status</th>
+                          <th>Partner Name</th>
+                          <th>Location</th>
+                          <th>Partner Type</th>
+                          <th>Sector</th>
                         </tr>  
                       </thead>
                       <tbody>
+                        {% for partner in partners %}
                         <tr>
-                          <td>Search Engine Marketing</td>
-                          <td class="font-weight-bold">$362</td>
-                          <td>21 Sep 2018</td>
-                          <td class="font-weight-medium"><div class="badge badge-success">Completed</div></td>
+                          <td>{{ partner.partner }}</td>
+                          <td class="font-weight-bold">{{ partner.country }}</td>
+                          <td>{{ partner.partner_type }}</td>
+                          <td class="font-weight-medium">{{ partner.sector }}</td>
                         </tr>
-                        <tr>
-                          <td>Search Engine Optimization</td>
-                          <td class="font-weight-bold">$116</td>
-                          <td>13 Jun 2018</td>
-                          <td class="font-weight-medium"><div class="badge badge-success">Completed</div></td>
-                        </tr>
-                        <tr>
-                          <td>Display Advertising</td>
-                          <td class="font-weight-bold">$551</td>
-                          <td>28 Sep 2018</td>
-                          <td class="font-weight-medium"><div class="badge badge-warning">Pending</div></td>
-                        </tr>
-                        <tr>
-                          <td>Pay Per Click Advertising</td>
-                          <td class="font-weight-bold">$523</td>
-                          <td>30 Jun 2018</td>
-                          <td class="font-weight-medium"><div class="badge badge-warning">Pending</div></td>
-                        </tr>
-                        <tr>
-                          <td>E-Mail Marketing</td>
-                          <td class="font-weight-bold">$781</td>
-                          <td>01 Nov 2018</td>
-                          <td class="font-weight-medium"><div class="badge badge-danger">Cancelled</div></td>
-                        </tr>
-                        <tr>
-                          <td>Referral Marketing</td>
-                          <td class="font-weight-bold">$283</td>
-                          <td>20 Mar 2018</td>
-                          <td class="font-weight-medium"><div class="badge badge-warning">Pending</div></td>
-                        </tr>
-                        <tr>
-                          <td>Social media marketing</td>
-                          <td class="font-weight-bold">$897</td>
-                          <td>26 Oct 2018</td>
-                          <td class="font-weight-medium"><div class="badge badge-success">Completed</div></td>
-                        </tr>
+                        {% endfor %}
                       </tbody>
                     </table>
                   </div>
