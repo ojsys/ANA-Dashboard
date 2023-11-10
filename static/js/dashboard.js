@@ -182,7 +182,7 @@
       var SalesChart = new Chart(SalesChartCanvas, {
         type: 'bar',
         data: {
-          labels: ["Jan", "Feb", "Mar", "Apr", "May"],
+          labels: ["Oyo", "Benue", "Ogun", "Ondo", "Kogi"],
           datasets: [{
               label: 'AKILIMO Crop',
               data: [480, 230, 470, 290, 330],
@@ -257,14 +257,14 @@
       var SalesChart = new Chart(SalesChartCanvas, {
         type: 'bar',
         data: {
-          labels: ["Jan", "Feb", "Mar", "Apr", "May"],
+          labels: ["Oyo", "Benue", "Ogun", "Ondo", "Kogi"],
           datasets: [{
-              label: 'AKILIMO Crops',
+              label: 'Male',
               data: [480, 230, 470, 290, 330],
               backgroundColor: '#3F6F4A'
             },
             {
-              label: 'Other Crops',
+              label: 'Female',
               data: [400, 340, 350, 200, 170],
               backgroundColor: '#3cb371'
             }
