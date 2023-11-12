@@ -36,3 +36,6 @@ def dashboard_view(request):
     return render(request, 'dashboard/dashboard.html', 
                   {'data': data, 'partners': partners, 'male_farmers': male_farmers,
                     'female_farmers': female_farmers, 'partners_count': partners_count})
+
+
+
