@@ -9,7 +9,7 @@ def register(request):
         if form.is_valid():
             user = form.save()
             login(request, user)
-            return redirect('dash')
+            return redirect('index')
     else:
         form = CustomUserCreationForm()
     return render(request, 'account/register.html', {'form': form})
@@ -21,7 +21,7 @@ def user_login(request):
         if form.is_valid():
             user = form.get_user()
             login(request, user)
-            return redirect('dash')
+            return redirect('index')
     else:
         form = CustomAuthenticationForm()
     return render(request, 'account/login.html', {'form': form})
