@@ -15,8 +15,11 @@ def index(request):
     partners_count = Dissemination.objects.values_list('partner', flat=True).distinct().count()
     partners2_count = Partner.objects.values_list('partner', flat=True)
 
-    male_farmers = Dissemination.objects.aggregate(total=Sum('farmers_M'))
-    female_farmers = Dissemination.objects.aggregate(total=Sum('farmers_F'))
+    male_farmers = Farmers.objects.count(total=Sum('farmers_M'))
+    female_farmers = Farmers.objects.count(total=Sum('farmers_F'))
+
+
+
     
     return render(request, 'dashboard/index.html', 
                   {'data': data, 'partners': partners, 'male_farmers': male_farmers,
