@@ -15,8 +15,10 @@ def index(request):
     partners_count = Dissemination.objects.values_list('partner', flat=True).distinct().count()
     partners2_count = Partner.objects.values_list('partner', flat=True)
 
-    male_farmers = Farmers.objects.count(total=Sum('farmers_M'))
-    female_farmers = Farmers.objects.count(total=Sum('farmers_F'))
+    farmers = Farmers.objects.all()
+
+    male_farmers = farmers.filter(gender='male').distinct().count()
+    female_farmers = farmers.filter(gender='female').distinct().count()
 
 
 

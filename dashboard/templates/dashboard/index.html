@@ -410,7 +410,7 @@
                   <div class="card card-tale">
                     <div class="card-body">
                       <p class="mb-4">Total Farmers</p>
-                      <p class="fs-30 mb-2">{{ male_farmers.total | add:female_farmers.total }}</p>
+                      <p class="fs-30 mb-2">{{ male_farmers | add:female_farmers }}</p>
                       <!-- <p>10.00% (90 days)</p> -->
                     </div>
                   </div>
@@ -430,7 +430,7 @@
                   <div class="card card-light-blue">
                     <div class="card-body">
                       <p class="mb-4">Female Farmers</p>
-                      <p class="fs-30 mb-2">{{ female_farmers.total }}</p>
+                      <p class="fs-30 mb-2">{{ female_farmers }}</p>
                       <!-- <p>2.00% (90 days)</p> -->
                     </div>
                   </div>
@@ -439,7 +439,7 @@
                   <div class="card card-light-danger">
                     <div class="card-body">
                       <p class="mb-4">Male Farmers</p>
-                      <p class="fs-30 mb-2">{{ male_farmers.total }}</p>
+                      <p class="fs-30 mb-2">{{ male_farmers }}</p>
                       <!-- <p>0.22% (90 days)</p> -->
                     </div>
                   </div>
