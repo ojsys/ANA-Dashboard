@@ -11,6 +11,7 @@ from .models import Dissemination, EventParticipants, Events, ExtensionAgents, P
 def index(request):
     data = Dissemination.objects.all()
     partners = Partner.objects.all()[:10]
+    total_partners = Partner.objects.count()
 
     partners_count = Dissemination.objects.values_list('partner', flat=True).distinct().count()
     partners2_count = Partner.objects.values_list('partner', flat=True)
@@ -20,11 +21,18 @@ def index(request):
     male_farmers = farmers.filter(gender='male').distinct().count()
     female_farmers = farmers.filter(gender='female').distinct().count()
 
-
+    context = {
+        'data': data, 
+        'partners': partners, 
+        'male_farmers': male_farmers,
+        'female_farmers': female_farmers, 
+        'partners_count': partners_count, 
+        'partners2_count': partners2_count,
+        'total_partners': total_partners
+    }
 
     
     return render(request, 'dashboard/index.html', 
-                  {'data': data, 'partners': partners, 'male_farmers': male_farmers,
-                    'female_farmers': female_farmers, 'partners_count': partners_count, 'partners2_count': partners2_count})
+                  context)
     
 
