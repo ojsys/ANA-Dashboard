@@ -17,9 +17,12 @@ def index(request):
     partners2_count = Partner.objects.values_list('partner', flat=True)
 
     farmers = Farmers.objects.all()
+    event_participants = EventParticipants.objects.all()
 
     male_farmers = farmers.filter(gender='male').distinct().count()
     female_farmers = farmers.filter(gender='female').distinct().count()
+
+
 
     context = {
         'data': data, 
