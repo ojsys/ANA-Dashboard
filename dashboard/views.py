@@ -18,6 +18,7 @@ def index(request):
 
     farmers = Farmers.objects.all()
     event_participants = EventParticipants.objects.all()
+    extension_agents = ExtensionAgents.objects.all()
 
     male_farmers = farmers.filter(gender='male').distinct().count()
     female_farmers = farmers.filter(gender='female').distinct().count()
