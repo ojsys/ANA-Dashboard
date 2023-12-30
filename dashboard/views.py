@@ -17,6 +17,7 @@ def index(request):
     partners2_count = Partner.objects.values_list('partner', flat=True)
 
     farmers = Farmers.objects.all()
+    events = Events.objects.all()
     event_participants = EventParticipants.objects.all()
     extension_agents = ExtensionAgents.objects.all()
 
