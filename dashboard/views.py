@@ -18,8 +18,10 @@ def index(request):
 
     farmers = Farmers.objects.all()
     events = Events.objects.all()
+    events_count = Events.objects.count()
     event_participants = EventParticipants.objects.all()
     extension_agents = ExtensionAgents.objects.all()
+
 
     male_farmers = farmers.filter(gender='male').distinct().count()
     female_farmers = farmers.filter(gender='female').distinct().count()
@@ -33,7 +35,9 @@ def index(request):
         'female_farmers': female_farmers, 
         'partners_count': partners_count, 
         'partners2_count': partners2_count,
-        'total_partners': total_partners
+        'total_partners': total_partners,
+        'events': events,
+        'events_count': events_count,
     }
 
     
