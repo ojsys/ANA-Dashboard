@@ -38,6 +38,8 @@ def index(request):
         'total_partners': total_partners,
         'events': events,
         'events_count': events_count,
+        'event_participants': event_participants,
+        
     }
 
     
