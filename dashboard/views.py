@@ -39,7 +39,8 @@ def index(request):
         'events': events,
         'events_count': events_count,
         'event_participants': event_participants,
-        
+        'extension_agents': extension_agents,
+
     }
 
     
