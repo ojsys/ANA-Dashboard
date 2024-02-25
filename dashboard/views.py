@@ -4,6 +4,7 @@ from django.shortcuts import render
 from django.db.models import Count, Sum
 from django.views import View
 from .models import Dissemination, EventParticipants, Events, ExtensionAgents, Partner, Farmers
+import datetime
 
 
 
@@ -21,6 +22,7 @@ def index(request):
     events_count = Events.objects.count()
     event_participants = EventParticipants.objects.all()
     extension_agents = ExtensionAgents.objects.all()
+    date = datetime.date.today()
 
 
     male_farmers = farmers.filter(gender='male').distinct().count()
@@ -40,6 +42,7 @@ def index(request):
         'events_count': events_count,
         'event_participants': event_participants,
         'extension_agents': extension_agents,
+        'date': date,
 
     }
 
