@@ -3,8 +3,8 @@ from django.contrib.auth.decorators import login_required
 from django.shortcuts import render
 from django.db.models import Count, Sum
 from django.views import View
-from .models import Dissemination, EventParticipants, Events, ExtensionAgents, Partner, Farmers
-from .forms import FarmerCreationForm
+from .models import Dissemination, EventParticipants, Events, ExtensionAgents, NewExtensionAgents, Partner, Farmers
+from .forms import FarmerCreationForm, NewExtensionAgentForm
 from django.core.paginator import Paginator
 import datetime
 
@@ -25,7 +25,14 @@ def index(request):
     event_participants = EventParticipants.objects.all()
     extension_agents = ExtensionAgents.objects.all()
     ea_count = extension_agents.count()
+    top_eas = extension_agents.annotate(total_farmers=Count('no_farmers')).order_by('-total_farmers').distinct()[:7]
     date = datetime.date.today()
+
+    top_agents = extension_agents.values('id').annotate(total_farmers=Count('no_farmers')).order_by('-total_farmers')[:7]
+
+    # You may then retrieve the agent details if needed
+    top_agents_with_details = ExtensionAgents.objects.filter(id__in=[agent['id'] for agent in top_agents])
+
 
     total_farmers = farmers.count()
     male_farmers = farmers.filter(gender='male').distinct().count()
@@ -48,6 +55,8 @@ def index(request):
         'date': date,
         'farmers': total_farmers,
         'ea_count': ea_count,
+        'top_eas': top_eas,
+        'top_agents': top_agents_with_details,
 
     }
 
@@ -93,3 +102,26 @@ def our_eas(request):
     context = {'our_eas': our_eas, 'display_org': display_org}
 
     return render(request, 'dashboard/our_eas.html', context)
+
+# Displaying the EAs
+@login_required
+def eas(request):
+    user = request.user
+    partner = Partner.objects.get(partner=user.organization)
+    display_org = user.organization.replace("_", " ")
+    
+    paginate = Paginator(NewExtensionAgents.objects.filter(org=partner).order_by('id'), 20)
+    page = request.GET.get('page')
+    eas = paginate.get_page(page)
+    
+    context = {'eas': eas, 'display_org': display_org}
+
+    return render(request, 'dashboard/eas.html', context)
+
+# Adding New Extension Agent
+@login_required
+def add_eas(request):
+    form = NewExtensionAgentForm()
+
+    context = {'form': form }
+    return render(request, 'dashboard/add_eas.html', context)
