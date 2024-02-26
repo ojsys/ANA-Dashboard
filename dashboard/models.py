@@ -194,6 +194,8 @@ class EventParticipants(models.Model):
         return self.partner + ' ' + self.participant + ' ' + self.no_participants
 
 
+CHOICES_HAS_PHONE = ((True, 'Yes'), (False, 'No'))
+
 class Farmers(models.Model):
     index = models.IntegerField(default=0)
     partner = models.CharField(max_length=100, blank=True, null=True)
@@ -201,7 +203,7 @@ class Farmers(models.Model):
     lastname = models.CharField(max_length=100, blank=True, null=True)
     gender = models.CharField(max_length=100, blank=True, null=True)
     phone_no = models.CharField(max_length=100, blank=True, null=True)
-    own_phone = models.BooleanField(default=False, null=True)
+    own_phone = models.BooleanField(default=False, null=True, choices=CHOICES_HAS_PHONE)
     crops = models.CharField(max_length=50, null=True, blank=True)
     crops_other = models.CharField(max_length=50, null=True)
     farm_area = models.DecimalField(decimal_places=2, max_digits=2, null=True)
@@ -216,3 +218,21 @@ class Farmers(models.Model):
         return self.firstname + ' ' + self.lastname + ' ' + self.crops + ' ' + self.farm_area + ' ' + self.area_unit
     
 
+class NewExtensionAgents(models.Model):
+
+    firstname = models.CharField(max_length=100, null=True)
+    lastname = models.CharField(max_length=100, null=True)
+    gender = models.CharField(max_length=100, null=True, choices=(('Male','Male'),('Female','Female')))
+    phone_no = models.CharField(max_length=100, null=True)
+    phone_no2 = models.CharField(max_length=100, null=True)
+    whatsapp = models.BooleanField(default=False, null=True)
+    email = models.CharField(max_length=100, null=True)
+    age = models.IntegerField(null=True)
+    education = models.CharField(max_length=100, null=True, choices=(('Secondary','Secondary'),('Diploma','Diploma'),('Degree','Degree'),('Masters','Masters'),('PhD','PhD')))
+    designation = models.CharField(max_length=100, null=True)
+    type_org = models.CharField(max_length=100, null=True, choices=(('NGO','NGO'),('Government','Government'),('Private','Private')))
+    org = models.CharField(max_length=100, null=True)
+    country = models.CharField(max_length=100, null=True)
+
+    def __str__(self):
+        return self.firstname + ' ' + self.lastname + ' ' + self.gender + ' ' + self.phone_no + ' ' + self.email + ' ' + self.org

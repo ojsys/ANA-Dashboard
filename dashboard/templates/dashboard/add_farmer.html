@@ -1,6 +1,39 @@
 {% extends 'dashboard/base.html' %}
 {% load static %}
+{% load crispy_forms_tags %}
 
-{% block content %}
+{% block main %}
 
-{% endblock content %}
+<div class="main-panel">
+    <div class="content-wrapper">
+      <div class="row">
+        <div class="col-md-12 grid-margin">
+          <div class="row">
+            <div class="col-12 col-xl-8 mb-4 mb-xl-0">
+                <h3 class="font-weight-bold ">Add A Farmer</h3>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-12 grid-margin">
+          <div class="row">
+            <div class="col-12 col-xl-8 mb-4 mb-xl-0">
+                <form action="" method="post">
+                    {% csrf_token %}
+                    {{ form | crispy }}
+                    <input class="btn btn-success text-white w-100" style="font-size: 1.4em;" type="submit" value="Add Farmer">
+                </form>
+            </div>
+            <div class="col-xl-4">
+                <img src="{% static 'static/images/dashboard/farm.png' %}" alt="">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>
+
+
+
+
+    
+{% endblock main %}
