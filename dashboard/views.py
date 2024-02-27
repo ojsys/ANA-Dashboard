@@ -13,7 +13,7 @@ import datetime
 @login_required
 def index(request):
     data = Dissemination.objects.all()
-    partners = Partner.objects.all()[:10]
+    partners = Partner.objects.all()
     total_partners = Partner.objects.count()
 
     partners_count = Dissemination.objects.values_list('partner', flat=True).distinct().count()
@@ -25,13 +25,8 @@ def index(request):
     event_participants = EventParticipants.objects.all()
     extension_agents = ExtensionAgents.objects.all()
     ea_count = extension_agents.count()
-    top_eas = extension_agents.annotate(total_farmers=Count('no_farmers')).order_by('-total_farmers').distinct()[:7]
+    top_eas = extension_agents.values('org').annotate(total_eas=Count('org')).order_by('-total_eas').distinct()[:7]
     date = datetime.date.today()
-
-    top_agents = extension_agents.values('id').annotate(total_farmers=Count('no_farmers')).order_by('-total_farmers')[:7]
-
-    # You may then retrieve the agent details if needed
-    top_agents_with_details = ExtensionAgents.objects.filter(id__in=[agent['id'] for agent in top_agents])
 
 
     total_farmers = farmers.count()
@@ -56,7 +51,7 @@ def index(request):
         'farmers': total_farmers,
         'ea_count': ea_count,
         'top_eas': top_eas,
-        'top_agents': top_agents_with_details,
+        
 
     }
 
