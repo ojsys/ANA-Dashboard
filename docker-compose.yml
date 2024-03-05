@@ -1,7 +1,9 @@
 version: '3'
 
 services:
-  web:
+  ana:
+    container_name: ana-dashboard
+    image: iita/ana-dashboard
     build:
       context: .
       dockerfile: Dockerfile
