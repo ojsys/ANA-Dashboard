@@ -12,11 +12,12 @@ RUN pip install poetry
 WORKDIR /app
 
 # Copy the dependencies files
-COPY pyproject.toml poetry.lock requirements.txt /app/
+COPY pyproject.toml poetry.lock /app/
 
 # Install dependencies using Poetry
-RUN poetry export --without-hashes -f requirements.txt > requirements-poetry.txt \
-    && pip install --no-cache-dir -r requirements.txt -r requirements-poetry.txt
+RUN poetry export --without-hashes -f requirements.txt > requirements.txt
+
+RUN pip install --no-cache-dir -r requirements.txt
 
 # Copy the rest of the application
 COPY . .
