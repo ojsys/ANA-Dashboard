@@ -2,7 +2,7 @@
 FROM python:3.12
 
 # Set the working directory in the container
-WORKDIR /code
+WORKDIR /app
 
 # Set environment variables
 ENV PYTHONDONTWRITEBYTECODE 1
@@ -13,14 +13,14 @@ RUN pip3 install poetry
 
 
 # Copy the dependencies file to the working directory
-COPY ./poetry.lock .
-COPY ./poetry.lock .
+COPY ./poetry.lock /app/
+COPY ./poetry.lock /app/
 
 # Install dependencies using Poetry
 RUN poetry install --no-root --no-interaction
 
 # Copy the current directory contents into the container at /code/
-COPY . .
+COPY . /app/
 
 # Collect static files
 #RUN python manage.py collectstatic --noinput
