@@ -1,32 +1,37 @@
-# Use an official Python runtime as a parent image
-FROM python:3.12
+# Use official Python 3.12 image as the base image
+FROM python:3.12-slim
 
 # Set environment variables
 ENV PYTHONDONTWRITEBYTECODE 1
 ENV PYTHONUNBUFFERED 1
 
-# Install Poetry
+# Install system dependencies
+RUN apt-get update \
+    && apt-get install -y --no-install-recommends \
+        build-essential \
+        python3-dev \
+        curl \
+    && rm -rf /var/lib/apt/lists/*
+
+# Install Poetry via pip
 RUN pip install poetry
 
-# Set the working directory
+# Set working directory in the container
 WORKDIR /app
 
-# Copy the dependencies files
+# Copy only the poetry.lock/pyproject.toml to leverage Docker cache
 COPY pyproject.toml poetry.lock /app/
 
-# Install dependencies using Poetry
-RUN poetry export --without-hashes -f requirements.txt > requirements.txt
+# Install dependencies
+RUN poetry config virtualenvs.create false \
+    && poetry install --no-dev --no-interaction --no-ansi
 
-RUN pip install --no-cache-dir -r requirements.txt
+# Copy the Django project into the container
+COPY . /app/
 
-# Copy the rest of the application
-COPY . .
-
-# Collect static files (replace this with your own collectstatic command if needed)
-# RUN poetry run python manage.py collectstatic --noinput
-
-# Make port 8000 available to the world outside this container
+# Expose the port the app runs on
 EXPOSE 8000
 
-# Run Django app on container startup
+# Run the Django app
 CMD ["poetry", "run", "python", "manage.py", "runserver", "0.0.0.0:8000"]
+
