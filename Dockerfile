@@ -15,7 +15,12 @@ WORKDIR /app
 COPY pyproject.toml poetry.lock /app/
 
 # Install dependencies using Poetry
-RUN poetry install --no-root --no-interaction
+#RUN poetry install --no-root --no-interaction
+
+RUN poetry export --without-hashes --format=requirements.txt > requirements.txt
+
+# Install dependencies from requirements.txt
+RUN pip install --no-cache-dir -r requirements.txt
 
 # Stage 2: Production-ready image
 FROM python:3.12-slim AS production
@@ -29,6 +34,11 @@ WORKDIR /app
 
 # Copy the application code from the builder stage
 COPY --from=builder /app .
+
+## Activate the virtual environment
+#ENV VIRTUAL_ENV=/venv
+#RUN python -m venv $VIRTUAL_ENV
+#ENV PATH="$VIRTUAL_ENV/bin:$PATH"
 
 # Copy the rest of the application
 COPY . .
