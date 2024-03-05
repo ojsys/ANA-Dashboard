@@ -13,12 +13,12 @@ WORKDIR /app
 
 # Copy the dependencies files
 COPY pyproject.toml poetry.lock /app/
-COPY requirements.txt /app/
+#COPY requirements.txt /app/
 
 # Install dependencies using Poetry
 #RUN poetry install --no-root --no-interaction
 
-RUN poetry export --without-hashes --format=requirements.txt > requirements.txt
+RUN poetry export --format=requirements.txt > requirements.txt
 
 # Install dependencies from requirements.txt
 RUN pip3 install -r requirements.txt
