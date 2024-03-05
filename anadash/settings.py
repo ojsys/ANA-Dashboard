@@ -16,7 +16,13 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['*']
 
-CSRF_TRUSTED_ORIGINS = ["*"]
+CSRF_TRUSTED_ORIGINS = [
+    "https://ana.akilimo.org",
+    "https://*.127.0.0.1",
+    "http://127.0.0.1",
+    "http://127.0.0.1:8005",
+    "105.27.148.194"
+]
 
 # Application definition
 
