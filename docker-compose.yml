@@ -1,7 +1,7 @@
 version: '3'
 
 services:
-  ana:
+  ana-dev:
     container_name: ana-dev
     image: iita/ana-dashboard
     build:
