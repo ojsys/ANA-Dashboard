@@ -21,7 +21,7 @@ COPY requirements.txt /app/
 #RUN poetry export --without-hashes --format=requirements.txt > requirements.txt
 
 # Install dependencies from requirements.txt
-RUN pip3 install requirements.txt
+RUN pip3 install -r requirements.txt
 
 # Stage 2: Production-ready image
 FROM python:3.12-slim AS production
