@@ -16,9 +16,6 @@ RUN apt-get update \
 # Install Poetry via pip
 RUN pip install poetry
 
-# Set up Poetry's bin directory in the PATH
-ENV PATH="${PATH}:/root/.poetry/bin"
-
 # Set working directory in the builder stage
 WORKDIR /app
 
@@ -36,15 +33,14 @@ FROM python:3.12-slim
 ENV PYTHONDONTWRITEBYTECODE 1
 ENV PYTHONUNBUFFERED 1
 
-# Copy installed dependencies from the builder stage
-COPY --from=builder /root/.poetry /root/.poetry
-COPY --from=builder /app /app
-
-# Set up Poetry's bin directory in the PATH
-ENV PATH="${PATH}:/root/.poetry/bin"
-
 # Set working directory in the final stage
 WORKDIR /app
+
+# Copy installed dependencies from the builder stage
+COPY --from=builder /usr/local/lib/python3.12/site-packages /usr/local/lib/python3.12/site-packages
+
+# Copy the Poetry executable from the builder stage
+COPY --from=builder /usr/local/bin/poetry /usr/local/bin/poetry
 
 # Copy the Django project into the container
 COPY . /app/
