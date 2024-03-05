@@ -13,7 +13,7 @@ RUN pip3 install poetry
 
 
 # Copy the dependencies file to the working directory
-COPY ./poetry.lock /app/
+COPY ./pyproject.toml /app/
 COPY ./poetry.lock /app/
 
 # Install dependencies using Poetry
