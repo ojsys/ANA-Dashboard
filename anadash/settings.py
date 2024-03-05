@@ -1,11 +1,9 @@
-
 from pathlib import Path
 import os
 from decouple import config
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
-
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.1/howto/deployment/checklist/
@@ -16,10 +14,9 @@ SECRET_KEY = config("SECRET_KEY")
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
-CSRF_TRUSTED_ORIGINS = ["https://*.akilimo.org", "https://*.127.0.0.1"]
-
+CSRF_TRUSTED_ORIGINS = ["https://*.akilimo.org", "https://*.127.0.0.1", "http://*.127.0.0.1"]
 
 # Application definition
 
@@ -35,7 +32,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    
+
 ]
 
 CRISPY_ALLOWED_TEMPLATE_PACK = "bootstrap5"
@@ -73,7 +70,6 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'anadash.wsgi.application'
 
-
 # Database
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 
@@ -83,7 +79,6 @@ DATABASES = {
         'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/4.1/ref/settings/#auth-password-validators
@@ -103,7 +98,6 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-
 # Internationalization
 # https://docs.djangoproject.com/en/4.1/topics/i18n/
 
@@ -114,7 +108,6 @@ TIME_ZONE = 'Africa/Lagos'
 USE_I18N = True
 
 USE_TZ = True
-
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.1/howto/static-files/
@@ -127,7 +120,6 @@ STATICFILES_DIRS = (os.path.join(BASE_DIR, ''),)
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
-
 
 LOGIN_URL = 'login'
 LOGIN_REDIRECT_URL = 'index'
