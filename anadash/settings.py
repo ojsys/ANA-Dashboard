@@ -21,7 +21,7 @@ CSRF_TRUSTED_ORIGINS = [
     "https://*.127.0.0.1",
     "http://127.0.0.1",
     "http://127.0.0.1:8005",
-    "105.27.148.194"
+    "http://105.27.148.194"
 ]
 
 # Application definition
