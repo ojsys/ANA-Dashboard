@@ -1,32 +1,26 @@
 version: '3'
 
 services:
-  ana:
+  ana-dev:
     container_name: ana-dashboard
-    image: iita/ana-dashboard
+    image: iita/ana-dashboard:${DEV_TAG}
     build:
       context: .
       dockerfile: Dockerfile
     ports:
       - "8000:8000"
-    #    depends_on:
-    #      - db
     environment:
-      #      - DJANGO_SETTINGS_MODULE=anadash.settings
       - DEBUG=1
       - SECRET_KEY=your_secret_key
-#      - POSTGRES_DB=anadash
-#      - POSTGRES_USER=anadash_user
-#      - POSTGRES_PASSWORD=anadash_password
 
-#  db:
-#    image: postgres:latest
-#    environment:
-#      - POSTGRES_DB=anadash
-#      - POSTGRES_USER=anadash_user
-#      - POSTGRES_PASSWORD=anadash_password
-#    volumes:
-#      - postgres_data:/var/lib/postgresql/data
-
-volumes:
-  postgres_data:
+  ana-prod:
+    container_name: ana-dashboard
+    image: iita/ana-dashboard:${PROD_TAG}
+    build:
+      context: .
+      dockerfile: Dockerfile.prod
+    ports:
+      - "8000:8001"
+    environment:
+      - DEBUG=0
+      - SECRET_KEY=production_secret_key
