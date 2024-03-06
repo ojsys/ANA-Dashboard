@@ -1,5 +1,5 @@
 # Stage 1: Build environment
-FROM python:3.12-slim AS builder
+FROM python:3.12-slim
 
 # Set environment variables
 ENV PYTHONDONTWRITEBYTECODE 1
@@ -26,24 +26,9 @@ COPY pyproject.toml poetry.lock /app/
 RUN poetry config virtualenvs.create false \
     && poetry install --no-dev --no-interaction --no-ansi
 
-RUN poetry add gunicorn
-
-# Stage 2: Production environment
-FROM python:3.12-slim
-
-# Set environment variables
-ENV PYTHONDONTWRITEBYTECODE 1
-ENV PYTHONUNBUFFERED 1
-ENV DJANGO_SETTINGS_MODULE=my_project.production_settings
-
-# Copy installed dependencies from the builder stage
-COPY --from=builder /usr/local/lib/python3.12/site-packages /usr/local/lib/python3.12/site-packages
-
-# Set working directory in the final stage
-WORKDIR /app
 
 # Copy the Django project into the container
-COPY . /app/
+COPY . /app
 
 # Expose the port the app runs on
 EXPOSE 8000

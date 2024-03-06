@@ -7,11 +7,15 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
+    volumes:
+      - ./static:/app/static
     ports:
       - "8000:8000"
     environment:
-      - DEBUG=1
-      - SECRET_KEY=your_secret_key
+      DEBUG: 0
+      SECRET_KEY: dev_secret_key
+      DJANGO_CSRF_TRUSTED_ORIGINS: 'http://localhost:8000'
+    restart: unless-stopped
 
   ana-prod:
     container_name: ana-prod
@@ -19,8 +23,22 @@ services:
     build:
       context: .
       dockerfile: Dockerfile.prod
+    volumes:
+      - ./static:/app/static
     ports:
-      - "8000:8001"
+      - "8005:8000"
     environment:
-      - DEBUG=0
-      - SECRET_KEY=production_secret_key
+      DEBUG: 0
+      SECRET_KEY: production_secret_key
+      DJANGO_CSRF_TRUSTED_ORIGINS: 'http://localhost:8000'
+    restart: unless-stopped
+
+  frontend-proxy:
+    image: nginx:latest
+    ports:
+      - "8000:80"
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf:ro
+      - ./static:/static:ro
+    depends_on:
+      - ana-prod
