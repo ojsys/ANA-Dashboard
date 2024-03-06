@@ -1,6 +1,6 @@
 from pathlib import Path
 import os
-from decouple import config, Csv
+from decouple import config
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -9,21 +9,14 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = config("SECRET_KEY", default='secret')
+SECRET_KEY = config("SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = config('DJANGO_DEBUG', default=False, cast=bool)
+DEBUG = True
 
-ALLOWED_HOSTS = config('ALLOWED_HOSTS', default='*', cast=Csv())
-CSRF_TRUSTED_ORIGINS = config('CSRF_TRUSTED_ORIGINS', default='http://127.0.0.1:8000', cast=Csv())
+ALLOWED_HOSTS = ["*"]
 
-# CSRF_TRUSTED_ORIGINS = [
-#     "https://ana.akilimo.org",
-#     "https://*.127.0.0.1",
-#     "http://127.0.0.1",
-#     "http://127.0.0.1:8010",
-#     "http://172.19.0.2:8005/"
-# ]
+CSRF_TRUSTED_ORIGINS = ["https://ana.akilimo.org", "https://*.127.0.0.1"]
 
 # Application definition
 
@@ -119,19 +112,9 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.1/howto/static-files/
 
-STATIC_URL = config('STATIC_URL', default='static/')
-STATIC_ROOT = config('STATIC_ROOT', default='static/')
-
-#STATICFILES_DIRS = (os.path.join(BASE_DIR, ''),)
-
-# Add the file extensions you want to exclude from being collected
-STATICFILES_EXCLUDE_EXTENSIONS = [
-    'zip',
-    'tar',
-    'gz',
-    'yml',
-    'prod'
-]
+STATIC_URL = 'static/'
+STATIC_ROOT = '/static/'
+STATICFILES_DIRS = (os.path.join(BASE_DIR, ''),)
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
