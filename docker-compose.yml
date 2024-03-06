@@ -18,7 +18,7 @@ services:
       CSRF_TRUSTED_ORIGINS: ${CSRF_TRUSTED_ORIGINS}
     restart: unless-stopped
 
-  ana-dashboard:
+  ana-prod:
     container_name: ana-dashboard
     image: iita/ana-dashboard:${PROD_TAG}
     build:
