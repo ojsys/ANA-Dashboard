@@ -26,7 +26,7 @@ services:
       dockerfile: Dockerfile.prod
     volumes:
       - ./static:/app/static
-      - ./docker.sqlite3:/app/db.sqlite3
+      - ./ana.db.sqlite3:/app/db.sqlite3
     #    ports:
     #      - "8787:8000"
     environment:
