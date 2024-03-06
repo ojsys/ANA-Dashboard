@@ -14,12 +14,12 @@ SECRET_KEY = config("SECRET_KEY", default='secret')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = config('DJANGO_DEBUG', default=False, cast=bool)
 
-ALLOWED_HOSTS = config('ALLOWED_HOSTS', default='*', cast=Csv())
-CSRF_TRUSTED_ORIGINS = config('CSRF_TRUSTED_ORIGINS', default='http://127.0.0.1:8000', cast=Csv())
+#ALLOWED_HOSTS = config('ALLOWED_HOSTS', default='*', cast=Csv())
+#CSRF_TRUSTED_ORIGINS = config('CSRF_TRUSTED_ORIGINS', default='http://127.0.0.1:8000', cast=Csv())
 
-# ALLOWED_HOSTS = ["*"]
+ALLOWED_HOSTS = ["*"]
 
-# CSRF_TRUSTED_ORIGINS = ["https://ana.akilimo.org", "https://*.127.0.0.1","http://127.0.0.1:8000"]
+CSRF_TRUSTED_ORIGINS = ["https://ana.akilimo.org", "https://*.127.0.0.1","http://127.0.0.1:8000"]
 
 # Application definition
 
