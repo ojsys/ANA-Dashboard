@@ -51,6 +51,7 @@ COPY --from=builder /app /app
 # Set working directory
 WORKDIR /app
 
+RUN ls -lt
 # Expose the port the app runs on
 EXPOSE 8000
 
