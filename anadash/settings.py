@@ -20,7 +20,7 @@ CSRF_TRUSTED_ORIGINS = [
     "https://ana.akilimo.org",
     "https://*.127.0.0.1",
     "http://127.0.0.1",
-    "http://127.0.0.1:8010",
+    "http://127.0.0.1:8000",
     "http://172.19.0.2:8005/"
 ]
 
