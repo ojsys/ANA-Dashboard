@@ -25,7 +25,7 @@ services:
       context: .
       dockerfile: Dockerfile.prod
     volumes:
-      - ./static:/app/static
+      - ./static:/static
     #      - ./db.sqlite3:/app/db.sqlite3
     #    ports:
     #      - "8787:8000"
@@ -43,6 +43,6 @@ services:
       - "8000:80"
     volumes:
       - ./nginx/nginx.conf:/etc/nginx/nginx.conf:ro
-      - ./static:/app/static:ro
+      - ./static:/var/www/static:ro
     depends_on:
       - ana-prod
