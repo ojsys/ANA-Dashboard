@@ -7,10 +7,10 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-#    volumes:
-#      - ./static:/app/static
-#    ports:
-#      - "8787:8000"
+    #    volumes:
+    #      - ./static:/app/static
+    #    ports:
+    #      - "8787:8000"
     environment:
       DEBUG: ${DEBUG}
       SECRET_KEY: ${SECRET_KEY}
@@ -24,9 +24,9 @@ services:
     build:
       context: .
       dockerfile: Dockerfile.prod
-#    volumes:
-#      - ./static:/app/static
-#      - ./db.sqlite3:/app/db.sqlite3
+    volumes:
+      - ./static:/app/static
+    #      - ./db.sqlite3:/app/db.sqlite3
     #    ports:
     #      - "8787:8000"
     environment:
@@ -43,6 +43,6 @@ services:
       - "8000:80"
     volumes:
       - ./nginx/nginx.conf:/etc/nginx/nginx.conf:ro
-#      - ./static:/static:ro
+      - ./static:/app/static:ro
     depends_on:
       - ana-prod
