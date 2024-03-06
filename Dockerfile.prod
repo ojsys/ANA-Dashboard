@@ -26,34 +26,14 @@ COPY pyproject.toml poetry.lock /app/
 RUN poetry config virtualenvs.create false \
     && poetry install --no-dev --no-interaction --no-ansi
 
-
 # Copy the Django project into the container
-#COPY . /app
+COPY . /app
 
-# Expose the port the app runs on
-#EXPOSE 8000
-
-# Collect static files
-#RUN python manage.py collectstatic --noinput
-
-# Run Gunicorn for production
-#CMD ["gunicorn", "--bind", "0.0.0.0:8000", "anadash.wsgi:application"]
-
-# Stage 2: Setup nginx and copy application code
-FROM nginx:alpine AS production
-
-# Copy nginx configuration
-COPY ./nginx/nginx.conf /etc/nginx/nginx.conf
-
-# Copy static files from builder stage
-COPY --from=builder /app /app
-
-# Set working directory
-WORKDIR /app
-
-RUN ls
 # Expose the port the app runs on
 EXPOSE 8000
+
+# Collect static files
+RUN python manage.py collectstatic --noinput
 
 # Run Gunicorn for production
 CMD ["gunicorn", "--bind", "0.0.0.0:8000", "anadash.wsgi:application"]
