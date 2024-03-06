@@ -15,17 +15,14 @@ SECRET_KEY = os.getenv("SECRET_KEY")
 DEBUG = os.getenv('DJANGO_DEBUG', False)
 
 ALLOWED_HOSTS = os.getenv('DJANGO_ALLOWED_HOSTS', '127.0.0.1').split(',')
-
 # ALLOWED_HOSTS = ['*']
-
-CORS_ALLOW_ALL_ORIGINS = True
 
 CSRF_TRUSTED_ORIGINS = [
     "https://ana.akilimo.org",
     "https://*.127.0.0.1",
     "http://127.0.0.1",
-    "http://127.0.0.1:8005",
-    "http://105.27.148.194"
+    "http://127.0.0.1:8010",
+    "http://172.19.0.2:8005/"
 ]
 
 # Application definition
