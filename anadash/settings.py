@@ -14,8 +14,8 @@ SECRET_KEY = config("SECRET_KEY", default='secret')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = config('DJANGO_DEBUG', default=False, cast=bool)
 
-ALLOWED_HOSTS = config('ALLOWED_HOSTS', default='127.0.0.1', cast=Csv())
-CSRF_TRUSTED_ORIGINS = config('CSRF_TRUSTED_ORIGINS', default='http://127.0.0.1', cast=Csv())
+ALLOWED_HOSTS = config('ALLOWED_HOSTS', default='*', cast=Csv())
+CSRF_TRUSTED_ORIGINS = config('CSRF_TRUSTED_ORIGINS', default='http://127.0.0.1:8000', cast=Csv())
 
 # CSRF_TRUSTED_ORIGINS = [
 #     "https://ana.akilimo.org",
@@ -120,9 +120,18 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.1/howto/static-files/
 
 STATIC_URL = config('STATIC_URL', default='static/')
-STATIC_ROOT = config('STATIC_ROOT', default='/static/')
+STATIC_ROOT = config('STATIC_ROOT', default='static/')
 
-STATICFILES_DIRS = (os.path.join(BASE_DIR, ''),)
+#STATICFILES_DIRS = (os.path.join(BASE_DIR, ''),)
+
+# Add the file extensions you want to exclude from being collected
+STATICFILES_EXCLUDE_EXTENSIONS = [
+    'zip',
+    'tar',
+    'gz',
+    'yml',
+    'prod'
+]
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
