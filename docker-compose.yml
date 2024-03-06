@@ -7,10 +7,10 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-    volumes:
-      - ./static:/app/static
-    ports:
-      - "8787:8000"
+#    volumes:
+#      - ./static:/app/static
+#    ports:
+#      - "8787:8000"
     environment:
       DEBUG: ${DEBUG}
       SECRET_KEY: ${SECRET_KEY}
@@ -24,8 +24,8 @@ services:
     build:
       context: .
       dockerfile: Dockerfile.prod
-    volumes:
-      - ./static:/app/static
+#    volumes:
+#      - ./static:/app/static
 #      - ./db.sqlite3:/app/db.sqlite3
     #    ports:
     #      - "8787:8000"
