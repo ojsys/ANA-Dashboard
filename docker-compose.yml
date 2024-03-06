@@ -33,7 +33,7 @@ services:
       DJANGO_CSRF_TRUSTED_ORIGINS: 'http://localhost:8000'
     restart: unless-stopped
 
-  frontend-proxy:
+  frontend:
     image: nginx:latest
     ports:
       - "8000:80"
