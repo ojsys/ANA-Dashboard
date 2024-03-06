@@ -28,7 +28,7 @@ services:
     ports:
       - "8787:8000"
     environment:
-      DEBUG: 0
+      DEBUG: 1
       SECRET_KEY: production_secret_key
       DJANGO_CSRF_TRUSTED_ORIGINS: 'http://localhost:8010'
     restart: unless-stopped
