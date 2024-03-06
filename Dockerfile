@@ -26,6 +26,11 @@ COPY pyproject.toml poetry.lock /app/
 RUN poetry config virtualenvs.create false \
     && poetry install --no-dev --no-interaction --no-ansi
 
+# Set up virtual environment
+ENV VIRTUAL_ENV=/app/env
+RUN python -m venv $VIRTUAL_ENV
+ENV PATH="$VIRTUAL_ENV/bin:$PATH"
+
 # Copy the Django project into the container
 COPY . /app/
 
