@@ -19,7 +19,7 @@ services:
     restart: unless-stopped
 
   ana-dashboard:
-    container_name: ana-prod
+    container_name: ana-dashboard
     image: iita/ana-dashboard:${PROD_TAG}
     build:
       context: .
