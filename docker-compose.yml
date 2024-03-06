@@ -45,4 +45,4 @@ services:
       - ./nginx/nginx.conf:/etc/nginx/nginx.conf:ro
       - ./static:/static:ro
     depends_on:
-      - ana-dashboard
+      - ana-prod
