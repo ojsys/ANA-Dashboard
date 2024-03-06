@@ -37,6 +37,7 @@ services:
     restart: unless-stopped
 
   frontend:
+    container_name: frontend
     image: nginx:latest
     ports:
       - "8000:80"
