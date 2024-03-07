@@ -1,2 +1,14 @@
 .env
+.env.*
 requirements.txt
+env/
+*.log
+*.tmp
+.vscode/
+.idea/
+*.pyc
+Dockerfile
+Dockerfile.prod
+docker-compose.yml
+.dockerignore
+
