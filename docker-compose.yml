@@ -1,0 +1,48 @@
+version: '3'
+
+services:
+  ana-dev:
+    container_name: ana-dev
+    image: iita/ana-dashboard:${DEV_TAG}
+    build:
+      context: .
+      dockerfile: Dockerfile
+    #    volumes:
+    #      - ./static:/app/static
+    #    ports:
+    #      - "8787:8000"
+    environment:
+      DEBUG: ${DEBUG}
+      SECRET_KEY: ${SECRET_KEY}
+      ALLOWED_HOSTS: ${ALLOWED_HOSTS}
+      CSRF_TRUSTED_ORIGINS: ${CSRF_TRUSTED_ORIGINS}
+    restart: unless-stopped
+
+  ana-prod:
+    container_name: ana-dashboard
+    image: iita/ana-dashboard:${PROD_TAG}
+    build:
+      context: .
+      dockerfile: Dockerfile.prod
+    volumes:
+      - ./static:/var/www/static
+    #      - ./db.sqlite3:/app/db.sqlite3
+    #    ports:
+    #      - "8787:8000"
+    environment:
+      DJANGO_DEBUG: ${DEBUG}
+      SECRET_KEY: ${SECRET_KEY}
+      ALLOWED_HOSTS: ${ALLOWED_HOSTS}
+      CSRF_TRUSTED_ORIGINS: ${CSRF_TRUSTED_ORIGINS}
+    restart: unless-stopped
+
+  frontend:
+    container_name: frontend
+    image: nginx:latest
+    ports:
+      - "8000:80"
+    volumes:
+      - ./nginx/nginx.conf:/etc/nginx/nginx.conf:ro
+      - ./static:/var/www/static/static:ro
+    depends_on:
+      - ana-prod
