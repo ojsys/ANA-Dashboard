@@ -54,15 +54,7 @@ def index(request):
     male_farmers = farmers.filter(gender='male').distinct().count()
     female_farmers = farmers.filter(gender='female').distinct().count()
 
-    locations = [
-        {'location': 'Lagos', 'country': 'Nigeria'},
-        {'location': 'Enugu', 'country': 'Nigeria'},
-        {'location': 'Abuja', 'country': 'Nigeria'},
-    ]
-    
-    # For each location, fetch the temperature
-    for loc in locations:
-        loc['temperature'] = get_weather(loc['location'])
+    temperature = get_weather(location)
 
     context = {
         'user': user,
@@ -84,7 +76,7 @@ def index(request):
         'farmers': total_farmers,
         'ea_count': ea_count,
         'top_eas': top_eas,
-        'locations': locations,
+        'temperature': temperature,
         
 
     }
