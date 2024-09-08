@@ -1,3 +1,5 @@
+from django.conf import settings
+from django.conf.urls.static import static
 from django.urls import path
 from . import views
 
@@ -8,4 +10,4 @@ urlpatterns = [
     path('eas/', views.our_eas, name='our_eas'),
     path('new_eas/', views.eas, name='new_eas'),
     path('add_ea/', views.add_eas, name='add_ea'),
-]
+]+ static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

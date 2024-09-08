@@ -1,5 +1,7 @@
 {% extends 'dashboard/base.html' %}
 {% load static %}
+{% load math_filters %}
+
 {% block main %}
     <!-- partial -->
     
@@ -11,7 +13,7 @@
             <div class="col-md-12 grid-margin">
               <div class="row">
                 <div class="col-12 col-xl-8 mb-4 mb-xl-0">
-                  <h3 class="font-weight-bold">Welcome Jonah</h3>
+                  <h3 class="font-weight-bold">Welcome {{ user.firstname }} </h3>
                   <h6 class="font-weight-normal mb-0">Have you visited the farm today? </h6>
                 </div>
                 <div class="col-12 col-xl-4">
@@ -30,24 +32,26 @@
           <div class="row">
             <div class="col-md-6 grid-margin stretch-card">
               <div class="card tale-bg">
-                <div class="card-people mt-auto">
-                  <img src="{% static 'static/images/dashboard/people.svg' %}" alt="people">
-                  <div class="weather-info">
-                    <div class="d-flex">
-                      <div>
-                        <h2 class="mb-0 font-weight-normal"><i class="icon-sun mr-2"></i>31<sup>C</sup></h2>
-                      </div>
-                      <div class="ml-2">
-                        <h4 class="location font-weight-normal">Ibadan</h4>
-                        <h6 class="font-weight-normal">Nigeria</h6>
-                      </div>
+                {% for loc in locations %}
+                <div class="card-people">
+                    <img src="{% static 'images/dashboard/farm.svg' %}" alt="people">
+                    <div class="weather-info">
+                        <div class="d-flex">
+                            <div>
+                                <h2 class="mb-0 font-weight-normal"><i class="icon-sun mr-2"></i>{{ loc.temperature|default:"N/A" }}<sup>C</sup></h2>
+                            </div>
+                            <div class="ml-2">
+                                <h4 class="location font-weight-normal">{{ loc.location }}</h4>
+                                <h6 class="font-weight-normal">{{ loc.country }}</h6>
+                            </div>
+                        </div>
                     </div>
-                  </div>
                 </div>
+                {% endfor %}
               </div>
             </div>
             <div class="col-md-6 grid-margin transparent">
-              <div class="row">
+              <div class="row" style="min-height: 190px;">
                 <div class="col-md-6 mb-4 stretch-card transparent">
                   <div class="card card-tale">
                     <div class="card-body">
@@ -67,7 +71,7 @@
                   </div>
                 </div>
               </div>
-              <div class="row">
+              <div class="row" style="min-height: 190px;">
                 <div class="col-md-6 mb-4 mb-lg-0 stretch-card transparent">
                   <div class="card card-light-blue">
                     <div class="card-body">
@@ -147,15 +151,18 @@
                                 <div class="table-responsive mb-3 mb-md-0 mt-3">
                                   <table class="table table-borderless report-table">
                                     {% for agent in top_eas %}
-                                    <tr>
-                                      <td class="text-muted">{{ agent.org }}</td>
-                                      <td class="w-100 px-0">
-                                        <div class="progress progress-md mx-4">
-                                          <div class="progress-bar bg-primary" role="progressbar" style="width: 70%" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
-                                        </div>
-                                      </td>
-                                      <td><h5 class="font-weight-bold mb-0">{{ agent.total_eas }}</h5></td>
-                                    </tr>
+                                      <tr>
+                                        <td class="text-muted">{{ agent.org }}</td>
+                                        <td class="w-100 px-0">
+                                            <div class="progress progress-md mx-4">
+                                                <div class="progress-bar bg-primary" role="progressbar" 
+                                                    style="width: {{ agent.total_eas|percentage:ea_count|floatformat:2 }}%" 
+                                                    aria-valuenow="{{ agent.total_eas }}" aria-valuemin="0" aria-valuemax="100">
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td><h5 class="font-weight-bold mb-0">{{ agent.total_eas }}</h5></td>
+                                      </tr>
                                     {% endfor %}
                                     <!-- <tr>
                                       <td class="text-muted">Ondo</td>

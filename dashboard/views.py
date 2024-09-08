@@ -7,11 +7,28 @@ from .models import Dissemination, EventParticipants, Events, ExtensionAgents, N
 from .forms import FarmerCreationForm, NewExtensionAgentForm
 from django.core.paginator import Paginator
 import datetime
+import requests
 
 
+
+def get_weather(location):
+    api_key = '7677795504e405409686392fc93047fc'
+    url = f'http://api.openweathermap.org/data/2.5/weather?q={location}&appid={api_key}&units=metric'
+    
+    response = requests.get(url)
+    if response.status_code == 200:
+        data = response.json()
+        return data['main']['temp']  # Temperature in Celsius
+    else:
+        return None  # Handle error cases here
 
 @login_required
 def index(request):
+    user = request.user
+    partner = Partner.objects.get(partner=user.organization)
+    location = user.location
+    country = partner.country
+
     data = Dissemination.objects.all()
     partners = Partner.objects.all()
     total_partners = Partner.objects.count()
@@ -23,19 +40,35 @@ def index(request):
     events = Events.objects.all()
     events_count = Events.objects.count()
     event_participants = EventParticipants.objects.all()
+    
+    # Get all Extension Agents
     extension_agents = ExtensionAgents.objects.all()
-    ea_count = extension_agents.count()
-    top_eas = extension_agents.values('org').annotate(total_eas=Count('org')).order_by('-total_eas').distinct()[:7]
-    date = datetime.date.today()
+    
+    # Maximum number of EAS
 
+    ea_count = extension_agents.count()
+    top_eas = extension_agents.values('org').annotate(total_eas=Count('org')).order_by('-total_eas').distinct()[:10]
+    date = datetime.date.today()
 
     total_farmers = farmers.count()
     male_farmers = farmers.filter(gender='male').distinct().count()
     female_farmers = farmers.filter(gender='female').distinct().count()
 
-
+    locations = [
+        {'location': 'Lagos', 'country': 'Nigeria'},
+        {'location': 'Enugu', 'country': 'Nigeria'},
+        {'location': 'Abuja', 'country': 'Nigeria'},
+    ]
+    
+    # For each location, fetch the temperature
+    for loc in locations:
+        loc['temperature'] = get_weather(loc['location'])
 
     context = {
+        'user': user,
+        'partner': partner,
+        'location': location,
+        'country': country,
         'data': data, 
         'partners': partners, 
         'male_farmers': male_farmers,
@@ -51,6 +84,7 @@ def index(request):
         'farmers': total_farmers,
         'ea_count': ea_count,
         'top_eas': top_eas,
+        'locations': locations,
         
 
     }
