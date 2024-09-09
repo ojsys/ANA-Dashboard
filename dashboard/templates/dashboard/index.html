@@ -4,7 +4,20 @@
 
 {% block main %}
     <!-- partial -->
-    
+    <style>
+      .background-image {
+          height: 380px;
+          background-size: cover;
+          background-position: center;
+          background-image: url('{% static 'images/dashboard/farm.svg' %}');
+      }
+      .piechart-container {
+            display: flex;
+            justify-content: center;  /* Centers horizontally */
+            align-items: center;      /* Centers vertically (optional) */
+            height: 100vh;            /* Makes the container fill the full viewport height (optional) */
+        }
+    </style>
       
       <!-- partial -->
       <div class="main-panel">
@@ -32,8 +45,8 @@
           <div class="row">
             <div class="col-md-6 grid-margin stretch-card">
               <div class="card tale-bg">
-                <div class="card-people">
-                  <img src="{% static 'images/dashboard/farm.svg' %}" alt="people">
+                <div class="card-people background-image">
+                  
                   <div class="weather-info">
                       <div class="d-flex">
                           <div>
@@ -103,16 +116,16 @@
                   <div class="d-flex flex-wrap mb-5">
                     <div class="mr-5 mt-3">
                       <p class="text-muted">Farmers</p>
-                      <h3 class="text-primary fs-30 font-weight-medium">{{ farmers }}</h3>
+                      <h3 class="text-primary fs-30 font-weight-medium">{{ active_farmers.total_farmers }}</h3>
                     </div>
                     <div class="mr-5 mt-3">
                       <p class="text-muted">Active AKILIMO Users</p>
-                      <h3 class="text-primary fs-30 font-weight-medium">328k</h3>
+                      <h3 class="text-primary fs-30 font-weight-medium">{{ farmers }}</h3>
                     </div>
                     
                     
                   </div>
-                  <canvas id="order-chart"></canvas>
+                  <canvas class="piechart-container" id="farmersPieChart"></canvas>
                 </div>
               </div>
             </div>
@@ -120,12 +133,12 @@
               <div class="card">
                 <div class="card-body">
                  <div class="d-flex justify-content-between">
-                  <p class="card-title">Farmers by States</p>
+                  <p class="card-title">Farmers by Location</p>
                   
                  </div>
-                  <p class="font-weight-500">Shows male and female farmers by states. </p>
+                  <p class="font-weight-500">Shows male and female farmers by location. </p>
                   <div id="sales-legend" class="chartjs-legend mt-4 mb-2"></div>
-                  <canvas id="sales-chart"></canvas>
+                  <canvas style="width: 100%; max-height: 400px !important;" id="sales-chart2"></canvas>
                 </div>
               </div>
             </div>
@@ -226,9 +239,10 @@
                           <div class="col-md-12 col-xl-3 d-flex flex-column justify-content-start">
                             <div class="ml-xl-4 mt-3">
                             <p class="card-title">Partners</p>
-                              <h1 class="text-primary">...</h1>
-                              <h3 class="font-weight-500 mb-xl-4 text-primary">Nigeria</h3>
-                              <p class="mb-2 mb-xl-0">Top partners with high impact events.</p>
+                              <h1 class="text-primary">{{ total_partners }}</h1>
+                              <h3 class="font-weight-500 mb-xl-4 text-primary">Total</h3>
+                              <p class="mb-2 mb-xl-0">Total partners with AKILOMO.</p>
+                              <p class="mb-2 mb-xl-0">{{ total. }}</p>
                             </div>  
                             </div>
                           <div class="col-md-12 col-xl-9">
@@ -236,16 +250,21 @@
                               <div class="col-md-6 border-right">
                                 <div class="table-responsive mb-3 mb-md-0 mt-3">
                                   <table class="table table-borderless report-table">
+                                    {% for partner in partner_farmers %}
                                     <tr>
-                                      <td class="text-muted">Illinois</td>
+                                      <td class="text-muted">{{ partner.partner }}</td>
                                       <td class="w-100 px-0">
                                         <div class="progress progress-md mx-4">
-                                          <div class="progress-bar bg-primary" role="progressbar" style="width: 70%" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
+                                          <div class="progress-bar bg-warning" role="progressbar" 
+                                            style="width: {{ partner.percentage|floatformat:2 }}%" 
+                                            aria-valuenow="{{ partner.total_farmers }}" aria-valuemin="0" aria-valuemax="100">
+                                          </div>
                                         </div>
                                       </td>
-                                      <td><h5 class="font-weight-bold mb-0">713</h5></td>
+                                      <td><h5 class="font-weight-bold mb-0">{{ partner.total_farmers }}</h5></td>
                                     </tr>
-                                    <tr>
+                                    {% endfor %}
+                                    <!-- <tr>
                                       <td class="text-muted">Washington</td>
                                       <td class="w-100 px-0">
                                         <div class="progress progress-md mx-4">
@@ -289,7 +308,7 @@
                                         </div>
                                       </td>
                                       <td><h5 class="font-weight-bold mb-0">793</h5></td>
-                                    </tr>
+                                    </tr> -->
                                   </table>
                                 </div>
                               </div>
@@ -552,4 +571,118 @@
         <!-- partial -->
       </div>
       <!-- main-panel ends -->
+
+      <script>
+        var farmersData = JSON.parse('{{ farmers_data|escapejs }}');
+
+        // Access farmersData from the template
+       
+
+        // Example of how to use the data in your Chart.js configuration
+        var labels = farmersData.map(function(item) {
+            return item.city;  // Assuming 'city' is the location
+        });
+
+        var maleFarmers = farmersData.map(function(item) {
+            return item.male_farmers;  // Assuming 'male_farmers' is the field for male farmers
+        });
+
+        var femaleFarmers = farmersData.map(function(item) {
+            return item.female_farmers;  // Assuming 'female_farmers' is the field for female farmers
+        });
+
+        var ctx = document.getElementById('sales-chart2').getContext('2d');
+        var chart = new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: labels,
+                datasets: [{
+                    label: 'Male Farmers',
+                    data: maleFarmers,
+                    backgroundColor: '#3F6F4A'
+                }, {
+                    label: 'Female Farmers',
+                    data: femaleFarmers,
+                    backgroundColor: '#3cb371'
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                scales: {
+                      y: {
+                          beginAtZero: true,
+                          steoSize:2000,
+                          ticks: {
+                              callback: function(value) {
+                                  if (value >= 1000000) {
+                                      return (value / 1000000) + 'M';  // Display in millions
+                                  } else if (value >= 1000) {
+                                      return (value / 1000) + 'K';    // Display in thousands
+                                  }
+                                  return value;  // Default display
+                              },
+                              font: {
+                                  size: 14  // Adjust font size if needed for larger numbers
+                              }
+                          }
+                      },
+                      x: {
+                          ticks: {
+                              font: {
+                                  size: 12  // Adjust font size for x-axis labels
+                              }
+                          }
+                      }
+                  },
+                  plugins: {
+                      legend: {
+                          display: true,
+                          position: 'top'
+                      }
+                  }
+            }
+        });
+        ///////////////////////////////////////
+      </script>
+      <script>
+        // Data passed from Django
+        var totalFarmers = JSON.parse('{{ active_farmers.total_farmers |escapejs }}');
+        var totalActiveFarmers = JSON.parse('{{ farmers|escapejs }}');
+        var inactiveFarmers = totalFarmers - totalActiveFarmers;
+
+        console.log(totalFarmers)
+        // Pie chart configuration
+        var ctx = document.getElementById('farmersPieChart').getContext('2d');
+        var farmersPieChart = new Chart(ctx, {
+            type: 'pie',
+            data: {
+                labels: ['Active Farmers', 'Inactive Farmers'],
+                datasets: [{
+                    data: [totalActiveFarmers, inactiveFarmers],
+                    backgroundColor: [
+                        '#4CAF50',  // Green for active farmers
+                        '#FF9800'   // Orange for inactive farmers
+                    ]
+                }]
+            },
+            options: {
+                responsive: true,
+                plugins: {
+                    legend: {
+                        display: true,
+                        position: 'top'
+                    },
+                    tooltip: {
+                        callbacks: {
+                            label: function(tooltipItem) {
+                                return tooltipItem.label + ': ' + tooltipItem.raw.toLocaleString();
+                            }
+                        }
+                    }
+                }
+            }
+        });
+      </script>
+
 {% endblock main %} 

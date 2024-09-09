@@ -8,6 +8,8 @@ from .forms import FarmerCreationForm, NewExtensionAgentForm
 from django.core.paginator import Paginator
 import datetime
 import requests
+import json
+from django.core.serializers.json import DjangoJSONEncoder
 
 
 
@@ -35,8 +37,11 @@ def index(request):
 
     partners_count = Dissemination.objects.values_list('partner', flat=True).distinct().count()
     partners2_count = Partner.objects.values_list('partner', flat=True)
-
+    
     farmers = Farmers.objects.all()
+    active_farmers = EventParticipants.objects.aggregate(
+        total_farmers=Sum('no_participants')
+    )
     events = Events.objects.all()
     events_count = Events.objects.count()
     event_participants = EventParticipants.objects.all()
@@ -48,11 +53,36 @@ def index(request):
 
     ea_count = extension_agents.count()
     top_eas = extension_agents.values('org').annotate(total_eas=Count('org')).order_by('-total_eas').distinct()[:10]
+    partner_farmers = Dissemination.objects.values('partner').annotate(
+        total_farmers = Sum('farmers_M') + Sum('farmers_F')
+    ).order_by('-total_farmers')[:10] # Sorting by the total farmers reached
+
+    # Find the maximum number of farmers reached by any single partner
+    max_farmers = partner_farmers[0]['total_farmers'] if partner_farmers else 0
+
+    # Calculate the percentage for each partner
+    for partner in partner_farmers:
+        partner['percentage'] = (partner['total_farmers'] / max_farmers) * 100 if max_farmers > 0 else 0
+
+    
     date = datetime.date.today()
 
     total_farmers = farmers.count()
     male_farmers = farmers.filter(gender='male').distinct().count()
     female_farmers = farmers.filter(gender='female').distinct().count()
+    # Aggregate farmers by location
+    farmers_data = Dissemination.objects.filter(country='Nigeria').exclude(city='NA').values('city').annotate(
+        male_farmers=Sum('farmers_M'),
+        female_farmers=Sum('farmers_F'),
+        total_farmers=Sum('farmers_M') + Sum('farmers_F')
+    ).order_by('-total_farmers')[:10]
+
+    locatons_city = [data['city'] for data in farmers_data]
+    male_farmers_city = [data['male_farmers'] for data in farmers_data]
+    female_farmers_city = [data['female_farmers'] for data in farmers_data]
+
+    # Prepare data for the chart (serialize it into JSON format)
+    data = json.dumps(list(farmers_data), cls=DjangoJSONEncoder)
 
     temperature = get_weather(location)
 
@@ -64,7 +94,8 @@ def index(request):
         'data': data, 
         'partners': partners, 
         'male_farmers': male_farmers,
-        'female_farmers': female_farmers, 
+        'female_farmers': female_farmers,
+        'active_farmers': active_farmers, 
         'partners_count': partners_count, 
         'partners2_count': partners2_count,
         'total_partners': total_partners,
@@ -76,9 +107,12 @@ def index(request):
         'farmers': total_farmers,
         'ea_count': ea_count,
         'top_eas': top_eas,
+        'partner_farmers': partner_farmers,
         'temperature': temperature,
-        
-
+        'locations_city': locatons_city,
+        'male_farmers_city': male_farmers_city,
+        'female_farmers_city': female_farmers_city,
+        'farmers_data': data,
     }
 
     

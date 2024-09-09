@@ -1,3 +1,41 @@
+// Access farmersData from the template
+console.log(farmersData);
+
+// Example of how to use the data in your Chart.js configuration
+var labels = farmersData.map(function(item) {
+    return item.city;  // Assuming 'city' is the location
+});
+
+var maleFarmers = farmersData.map(function(item) {
+    return item.male_farmers;  // Assuming 'male_farmers' is the field for male farmers
+});
+
+var femaleFarmers = farmersData.map(function(item) {
+    return item.female_farmers;  // Assuming 'female_farmers' is the field for female farmers
+});
+
+var ctx = document.getElementById('sales-chart').getContext('2d');
+var chart = new Chart(ctx, {
+    type: 'bar',
+    data: {
+        labels: labels,
+        datasets: [{
+            label: 'Male Farmers',
+            data: maleFarmers,
+            backgroundColor: '#3F6F4A'
+        }, {
+            label: 'Female Farmers',
+            data: femaleFarmers,
+            backgroundColor: '#3cb371'
+        }]
+    },
+    options: {
+        responsive: true,
+        maintainAspectRatio: false
+    }
+});
+///////////////////////////////////////
+
 (function($) {
   'use strict';
   $(function() {
@@ -177,8 +215,8 @@
         options: areaOptions
       });
     }
-    if ($("#sales-chart").length) {
-      var SalesChartCanvas = $("#sales-chart").get(0).getContext("2d");
+    if ($("#sales-chart1").length) {
+      var SalesChartCanvas = $("#sales-chart1").get(0).getContext("2d");
       var SalesChart = new Chart(SalesChartCanvas, {
         type: 'bar',
         data: {
@@ -252,8 +290,8 @@
       });
       document.getElementById('sales-legend').innerHTML = SalesChart.generateLegend();
     }
-    if ($("#sales-chart-dark").length) {
-      var SalesChartCanvas = $("#sales-chart-dark").get(0).getContext("2d");
+    if ($("#sales-chart-dark1").length) {
+      var SalesChartCanvas = $("#sales-chart-dark1").get(0).getContext("2d");
       var SalesChart = new Chart(SalesChartCanvas, {
         type: 'bar',
         data: {
