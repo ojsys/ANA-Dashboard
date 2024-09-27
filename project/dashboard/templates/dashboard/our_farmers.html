@@ -1,0 +1,74 @@
+{% extends 'dashboard/base.html' %}
+{% load static %}
+
+{% block main %}
+<div class="main-panel">
+    <div class="content-wrapper">
+      <div class="row">
+        <div class="col-md-12 grid-margin">
+          <div class="row">
+            <div class="col-12 col-xl-8 mb-4 mb-xl-0">
+                <h3 class="font-weight-bold ">Our Farmers at {{ display_org }}</h3>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-12 grid-margin">
+          <div class="row">
+            <div class="col-12 col-xl-8 mb-4 mb-xl-0 " style="overflow-x:auto;">
+                <table class="table table-striped">
+                    <thead>
+                      <tr>
+                        <th scope="col">First Name</th>
+                        <th scope="col">Last Name</th>
+                        <th scope="col">Gender</th>
+                        <th scope="col">Crops</th>
+                        <th scope="col">Other Crops</th>
+                        <th scope="col">Farm Area</th>
+                        <th scope="col">Farm Area Unit</th>
+                        <th scope="col">Has Phone?</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                        {% for farmer in farmers %}
+                      <tr>
+                        <th scope="row">{{ farmer.firstname }}</th>
+                        <td>{{ farmer.lastname }}</td>
+                        <td>{{ farmer.gender }}</td>
+                        <td>{{ farmer.crops }}</td>
+                        <td>{{ farmer.crops_other }}</td>
+                        <td>{{ farmer.farm_area }}</td>
+                        <td>{{ farmer.area_unit }}</td>
+                        <td>
+                            {% if farmer.phone_no %}
+                                {{ "Yes" }}
+                            {% else %}
+                                {{"No"}}
+                            {% endif %}
+                        </td>
+                        
+                      </tr>
+                      {% endfor %}
+                      
+                    </tbody>
+                  </table>
+
+                  <div class="mt-4">
+                    {% if farmers.has_previous %}
+                        <a href="?page=1">&laquo; First</a>
+                        <a href="?page={{ farmers.previous_page_number }}">Previous</a>
+                    {% endif %}
+                    
+                    Page {{ farmers.number }} of {{ farmers.paginator.num_pages }}
+                        
+                    {% if farmers.has_next %}
+                        <a href="?page={{ farmers.next_page_number }}">Next</a>
+                        <a href="?page={{ farmers.paginator.num_pages }}">Last &raquo;</a>
+                    {% endif %}
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>
+{% endblock main %}

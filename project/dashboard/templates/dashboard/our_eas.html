@@ -1,0 +1,72 @@
+{% extends 'dashboard/base.html' %}
+{% load static %}
+
+{% block main %}
+<div class="main-panel">
+    <div class="content-wrapper">
+      <div class="row">
+        <div class="col-md-12 grid-margin">
+          <div class="row">
+            <div class="col-12 col-xl-8 mb-4 mb-xl-0">
+                <h3 class="font-weight-bold ">Extension Agents at {{ display_org }}</h3>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-12 grid-margin">
+          <div class="row">
+            <div class="col-12 col-xl-8 mb-4 mb-xl-0" style="overflow-x:auto;">
+                <table class="table table-striped">
+                    <thead>
+                      <tr>
+                        <th scope="col">First Name</th>
+                        <th scope="col">Last Name</th>
+                        <th scope="col">Gender</th>
+                        <th scope="col">Education</th>
+                        <th scope="col">Designation</th>
+                        <th scope="col">No. of Farmers</th>
+                        <th scope="col">Certified?</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                        {% for ea in our_eas %}
+                      <tr>
+                        <th scope="row">{{ ea.firstname }}</th>
+                        <td>{{ ea.lastname }}</td>
+                        <td>{{ ea.gender }}</td>
+                        <td>{{ ea.education }}</td>
+                        <td>{{ ea.designation }}</td>
+                        <td>{{ ea.no_farmers }}</td>
+                        <td>
+                            {% if ea.certified %}
+                                {{ "Yes" }}
+                            {% else %}
+                                {{"No"}}
+                            {% endif %}
+                        </td>
+                        
+                      </tr>
+                      {% endfor %}
+                      
+                    </tbody>
+                  </table>
+
+                  <div class="mt-4">
+                    {% if our_eas.has_previous %}
+                        <a href="?page=1">&laquo; First</a>
+                        <a href="?page={{ our_eas.previous_page_number }}">Previous</a>
+                    {% endif %}
+                    
+                    Page {{ our_eas.number }} of {{ our_eas.paginator.num_pages }}
+                        
+                    {% if our_eas.has_next %}
+                        <a href="?page={{ our_eas.next_page_number }}">Next</a>
+                        <a href="?page={{ our_eas.paginator.num_pages }}">Last &raquo;</a>
+                    {% endif %}
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>
+{% endblock main %}

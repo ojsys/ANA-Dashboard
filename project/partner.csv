@@ -1,0 +1,274 @@
+country,partner,partnerfull,sector,partner_type,vc_segmain,vc_segs,integrated,mel_data,input_supply,production,digital_services,marketing_processing,financial_services,research,policy_regulation
+Tanzania,ABM_Farm,ABM Farm,private,mechanisation_services,production,production,TRUE,TRUE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
+Tanzania,IITA,IITA,public,NGO,research,production research,TRUE,TRUE,FALSE,TRUE,FALSE,FALSE,FALSE,TRUE,FALSE
+Nigeria,ESCFAL,ESCFAL,public,NGO,production,production,NA,NA,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
+Nigeria,Esomchi_Foundation,Esomchi_Foundation,public,NGO,production,production,NA,NA,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
+Nigeria,Eweko_Concept,Eweko_Concept,private,marketing_enterprise,production,production digital_services,TRUE,TRUE,FALSE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE
+Nigeria,FADAMA,FADAMA,public,government_extension,production,production,TRUE,TRUE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
+Nigeria,Farmers_export_Market_Network,Farmers export Market Network,public,NGO,marketing_processing,marketing_processing,NA,NA,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
+Nigeria,Federal_College_of_Agriculture_Akure,Federal College of Agriculture Akure,public,university,research,production research,NA,NA,FALSE,TRUE,FALSE,FALSE,FALSE,TRUE,FALSE
+Nigeria,FIIRO,Federal Institute of Industrial Research Oshodi Lagos,public,research_institute,research,research,NA,NA,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE
+Nigeria,Fieldplus_Agro_Initiatives,Fieldplus Agro Initiatives,private,agrochemical_company,input_supply,input_supply,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+Ghana,Food_and_Agriculture_Organization,Food and Agriculture Organization,public,NGO,production,production,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
+Ghana,Food_and_Drugs_Authority,Food and Drugs Authority,public,NGO,production,production,NA,NA,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
+Tanzania,Jv_biotech_enterprises_company_limited,Jv biotech enterprises company limited,private,local_processor,marketing_processing,production marketing_processing,TRUE,TRUE,FALSE,TRUE,FALSE,TRUE,FALSE,FALSE,FALSE
+Nigeria,Food_For_All_International,Food For All International,private,aggregator_buyer,marketing_processing,marketing_processing,NA,NA,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
+Nigeria,Forestry_reserve_commission,Forestry reserve commission,public,NGO,production,production,TRUE,TRUE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
+Nigeria,Foundation_for_Justice_Development_and_Peace,Foundation for Justice Development and Peace,public,NGO,production,production,NA,NA,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
+Nigeria,FUAM,FUAM,public,university,research,production research,TRUE,TRUE,FALSE,TRUE,FALSE,FALSE,FALSE,TRUE,FALSE
+Nigeria,FUNAAB,FUNAAB,public,university,research,research,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE
+Nigeria,GaatAgro,GaatAgro,private,agrochemical_company,input_supply,input_supply production,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
+Ghana,GCCE,GCCE,private,aggregator_buyer,production,production marketing_processing,TRUE,TRUE,FALSE,TRUE,FALSE,TRUE,FALSE,FALSE,FALSE
+Nigeria,Gede_Foundation,Gede_Foundation,public,NGO,production,production,TRUE,TRUE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
+Nigeria,Gemehaam_Bees_Limited,Gemehaam Bees Limited,public,NGO,production,production,TRUE,TRUE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
+Nigeria,Getit_Agribusiness_Consulting,Getit_Agribusiness_Consulting,private,other_production_service,production,production,TRUE,TRUE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
+Tanzania,Kakonko_District_Council,Kakonko District Council,public,government_extension,production,production,NA,NA,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
+Ghana,Ghana_Enterprise_Agency,Ghana Enterprise Agency,private,agrochemical_company,production,production,NA,NA,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
+Ghana,Ghana_Exim,Ghana Exim,public,NGO,production,production,NA,NA,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
+Ghana,Ghana_Export_Promotion_Authority,Ghana Export Promotion Authority,private,aggregator_buyer,marketing_processing,marketing_processing,NA,NA,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
+Ghana,Ghana_Standards_Authority,Ghana Standards Authority,public,government_digital_advisory,digital_services,digital_services,NA,NA,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE
+Nigeria,GIZ,GIZ,public,NGO,production,production,NA,NA,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
+Nigeria,Gocham_Farm,Gocham Farm,public,NGO,production,production,NA,NA,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
+Nigeria,Golden_Lad_Nigeria_Limited,Golden Lad Nigeria Limited,private,local_processor,marketing_processing,marketing_processing,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
+Nigeria,Gravid_Premiere_Integrated_Ltd,Gravid Premiere Integrated Ltd,private,agrochemical_company,input_supply,input_supply,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+Nigeria,Greater_ugoeze_enterprises,Greater ugoeze enterprises international ltd,private,local_processor,marketing_processing,marketing_processing,NA,NA,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
+Nigeria,Green_Revolution,Green Revolution,private,local_processor,marketing_processing,marketing_processing,NA,NA,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
+Tanzania,Kasulu_District_Council,Kasulu District Council,public,government_extension,production,production,NA,NA,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
+Nigeria,GreenTech,GreenTech Industry,private,local_processor,marketing_processing,marketing_processing,NA,NA,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
+Tanzania,Elikana_Commercial_Farmer,Elikana Commercial Farmer,private,local_processor,marketing_processing,production marketing_processing,TRUE,NA,FALSE,TRUE,FALSE,TRUE,FALSE,FALSE,FALSE
+Tanzania,TFNC,TFNC,public,research_institute,research,production marketing_processing research policy_regulation,TRUE,NA,FALSE,TRUE,FALSE,TRUE,FALSE,TRUE,TRUE
+Tanzania,Kigoma_Region_ENABEL,Kigoma Region & ENABEL,public,NGO,production,production marketing_processing,TRUE,TRUE,FALSE,TRUE,FALSE,TRUE,FALSE,FALSE,FALSE
+Tanzania,Tabora_Municipal_Council,Tabora Municipal Council,public,government_extension,production,production,TRUE,TRUE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
+Tanzania,Dar_Canton,Dar Canton,private,aggregator_buyer,marketing_processing,production marketing_processing,NA,NA,FALSE,TRUE,FALSE,TRUE,FALSE,FALSE,FALSE
+Tanzania,Elikana_Commercial_Farmer,Elikana Commercial Farmer,private,local_processor,marketing_processing,production marketing_processing,TRUE,NA,FALSE,TRUE,FALSE,TRUE,FALSE,FALSE,FALSE
+Tanzania,Evance_Mbwana_Mkata_Agricultural_C0_Ltd,Evance and Mbwana MKata Agricultural Co. Ltd,private,marketing_enterprise,marketing_processing,production marketing_processing,NA,NA,FALSE,TRUE,FALSE,TRUE,FALSE,FALSE,FALSE
+Tanzania,Genious_Creative_Foundation,Genious Creative Foundation,private,local_processor,marketing_processing,production marketing_processing,TRUE,NA,FALSE,TRUE,FALSE,TRUE,FALSE,FALSE,FALSE
+Tanzania,Jipe_Moyo,Jipe Moyo,private,local_processor,marketing_processing,production marketing_processing,TRUE,TRUE,FALSE,TRUE,FALSE,TRUE,FALSE,FALSE,FALSE
+Tanzania,eSOKO,eSOKO,private,digital_advisory_enterprise,digital_services,production digital_services,TRUE,TRUE,FALSE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE
+Tanzania,Jipe_Moyo_Utashinda,Jipe Moyo Utashinda,private,local_processor,production,production marketing_processing,NA,NA,FALSE,TRUE,FALSE,TRUE,FALSE,FALSE,FALSE
+Tanzania,Jitegemee_Farmers_Group,Jitegemee Farmers Group,public,farmer_association,marketing_processing,production marketing_processing,TRUE,TRUE,FALSE,TRUE,FALSE,TRUE,FALSE,FALSE,FALSE
+Tanzania,Juhudi,Juhudi,private,local_processor,production,production marketing_processing,NA,NA,FALSE,TRUE,FALSE,TRUE,FALSE,FALSE,FALSE
+Tanzania,Kigoma_Ujiji_Municipal_Council,KIgoma Ujiji Municipal Council,public,government_extension,production,production,TRUE,TRUE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
+Tanzania,Kikundi_Muungano_Mnamunjelele,Kikundi Muungano Mnamunjelele,public,farmer_association,marketing_processing,production marketing_processing,TRUE,TRUE,FALSE,TRUE,FALSE,TRUE,FALSE,FALSE,FALSE
+Tanzania,Kilimo_ni_Afya,Kilimo ni Afya,private,local_processor,marketing_processing,production marketing_processing,NA,NA,FALSE,TRUE,FALSE,TRUE,FALSE,FALSE,FALSE
+Tanzania,Kipipa_Millers,Kipipa Millers,private,processing_factory,marketing_processing,production marketing_processing,TRUE,TRUE,FALSE,TRUE,FALSE,TRUE,FALSE,FALSE,FALSE
+Tanzania,Kiroho_Safi,Kiroho Safi,private,local_processor,production,production marketing_processing,NA,NA,FALSE,TRUE,FALSE,TRUE,FALSE,FALSE,FALSE
+Tanzania,Kituluma,Kituluma,private,local_processor,production,production marketing_processing,NA,NA,FALSE,TRUE,FALSE,TRUE,FALSE,FALSE,FALSE
+Tanzania,Korogwe_District_Council,Korogwe District Council,public,government_extension,production,production,FALSE,NA,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
+Tanzania,Kilimo_Joint,Kilimo Joint,private,agrochemical_company,input_supply,input_supply production marketing_processing,TRUE,TRUE,TRUE,TRUE,FALSE,TRUE,FALSE,FALSE,FALSE
+Tanzania,Lindi_Municipal_Council_Sprayer_Operators,Lindi Municipal Council Sprayer Operators,private,private_extension,production,production,TRUE,TRUE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
+Tanzania,Magu_District_Council,Magu District Council,public,government_extension,production,production,TRUE,NA,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
+Tanzania,Misenani_Agri_Service_Ltd,Misenani Agri Service Ltd,private,local_processor,marketing_processing,marketing_processing,TRUE,TRUE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
+Tanzania,Mkombozi_Group,Mkombozi Group,public,farmer_association,production,production marketing_processing,TRUE,NA,FALSE,TRUE,FALSE,TRUE,FALSE,FALSE,FALSE
+Tanzania,Muhogo_Ni_Fursa,Muhogo Ni Fursa,private,local_processor,production,production marketing_processing,TRUE,NA,FALSE,TRUE,FALSE,TRUE,FALSE,FALSE,FALSE
+Tanzania,Mviwata_Mkuranga_Pwani,Mviwata Mkuranga Pwani,public,farmer_association,production,production marketing_processing,TRUE,TRUE,FALSE,TRUE,FALSE,TRUE,FALSE,FALSE,FALSE
+Tanzania,Newala_District_Sprayer_Operators_Group,Newala District Sprayer Operators Group,private,private_extension,production,production,TRUE,TRUE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
+Tanzania,Njingamile_Cassava_Investment,Njingamile Cassava Investment,private,local_processor,marketing_processing,marketing_processing,TRUE,TRUE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
+Tanzania,Nyandwi_Kaloli,Nyandwi Kaloli,private,local_processor,marketing_processing,marketing_processing,TRUE,NA,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
+Tanzania,Rabika_Poultry_Farm,Rabika Poultry Farm,private,other_production_service,production,production,TRUE,TRUE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
+Tanzania,KOLPING,KOLPING,public,NGO,marketing_processing,production marketing_processing financial_services,TRUE,TRUE,FALSE,TRUE,FALSE,TRUE,TRUE,FALSE,FALSE
+Tanzania,Raqibu_Investment,Raqibu Investment,private,marketing_enterprise,marketing_processing,marketing_processing,TRUE,TRUE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
+Tanzania,Rum_Zahrain,Rum Zahrain,public,farmer_association,production,production marketing_processing,TRUE,TRUE,FALSE,TRUE,FALSE,TRUE,FALSE,FALSE,FALSE
+Tanzania,Ruwaida_Investment,Ruwaida Investment,private,local_processor,marketing_processing,production marketing_processing,TRUE,TRUE,FALSE,TRUE,FALSE,TRUE,FALSE,FALSE,FALSE
+Tanzania,Segera_Farm_Association,Segera Farm Association,public,farmer_association,production,production,TRUE,TRUE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
+Tanzania,SIDO,SIDO,public,government_extension,marketing_processing,production marketing_processing financial_services,NA,NA,FALSE,TRUE,FALSE,TRUE,TRUE,FALSE,FALSE
+Tanzania,TAEPZ,TAEPZ,private,processing_factory,marketing_processing,production marketing_processing,NA,NA,FALSE,TRUE,FALSE,TRUE,FALSE,FALSE,FALSE
+Tanzania,Tandahimba_District_Council,Tandahimba District Council,public,government_extension,production,production,TRUE,TRUE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
+Tanzania,Tunaweza_Farmers_Group,Tunaweza Farmers Group,public,farmer_association,production,production marketing_processing,TRUE,TRUE,FALSE,TRUE,FALSE,TRUE,FALSE,FALSE,FALSE
+Tanzania,Tushikamane_Group,Tushikamane Group,public,farmer_association,production,production marketing_processing,TRUE,NA,FALSE,TRUE,FALSE,TRUE,FALSE,FALSE,FALSE
+Tanzania,Wanguzu_Investment,Wanguzu Investment,private,other_production_service,production,production,TRUE,TRUE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
+Tanzania,Lindi_District_Council,Lindi District Council,public,government_extension,production,input_supply production,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
+Ghana,Halaf_Agribusiness_company,Halaf Agribusiness company,private,aggregator_buyer,marketing_processing,marketing_processing,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
+Nigeria,Harvest_Feed,Harvest Feed,private,local_processor,marketing_processing,marketing_processing,NA,NA,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
+Nigeria,Honeycomb_Ventures,Honeycomb Ventures,private,agrochemical_company,input_supply,input_supply,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+Nigeria,Hope_givers_initiative,Hope givers initiative,public,NGO,production,input_supply production,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
+Nigeria,IEVPS,IEVPS,public,NGO,production,production,TRUE,TRUE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
+Nigeria,IFAD,IFAD,public,NGO,financial_services,production financial_services,NA,NA,FALSE,TRUE,FALSE,FALSE,TRUE,FALSE,FALSE
+Nigeria,IGD,IGD,public,NGO,production,production,NA,NA,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
+Nigeria,Imo_ADP,Imo ADP,public,NGO,production,production,NA,NA,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
+Nigeria,Jairus_Ogbu,Jairus Ogbu,public,NGO,production,production,NA,NA,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
+Nigeria,Jamesmike_integrated_farms,Jamesmike integrated farms,private,agrochemical_company,input_supply,input_supply production,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
+Tanzania,MATI,MATI,public,university,production,production,TRUE,TRUE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
+Nigeria,JDPC_Ibadan,JDPC Ibadan,public,NGO,production,production,TRUE,TRUE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
+Nigeria,JDPI_Catholic_Diocese_of_Ekiti,JDPI Catholic Diocese of Ekiti,public,NGO,production,production,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
+Nigeria,JDPM,JDPM,public,NGO,production,production,TRUE,TRUE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
+Nigeria,JDPM_Abeokuta,JDPM Abeokuta,public,NGO,production,production,FALSE,TRUE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
+Nigeria,Joyworth,Joyworth,private,agrochemical_company,input_supply,input_supply production,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
+Nigeria,JDPMC_Osogbo,JDPMC Osogbo,public,NGO,production,production,TRUE,TRUE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
+Nigeria,Klick_Konnect_Networks_International,Klick Konnect Networks International,private,agrochemical_company,input_supply,input_supply production,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
+Nigeria,KOLPING,KOLPING,public,NGO,production,production,TRUE,TRUE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
+Nigeria,KWOT_Agro,KWOT Agro,private,agrochemical_company,input_supply,input_supply production,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
+Nigeria,Lakatabu,Lakatabu,private,local_processor,marketing_processing,marketing_processing,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
+Tanzania,MEDA,MEDA,public,NGO,marketing_processing,input_supply production digital_services marketing_processing financial_services research policy_regulation,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE
+Nigeria,Lamin_Royal_Farm,Lamin Royal Farm,private,agrochemical_company,input_supply,input_supply production,NA,NA,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
+Ghana,Legends_Foods,Legends Foods,private,aggregator_buyer,marketing_processing,marketing_processing,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
+Nigeria,LUCAF,Lift up care foundation (LUCAF),public,NGO,production,production,NA,NA,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
+Nigeria,Lumen_Fidei,Lumen Fidei,public,NGO,production,input_supply production,NA,NA,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
+Nigeria,Matna_Food,Matna Food,private,processing_factory,marketing_processing,marketing_processing,FALSE,NA,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
+Nigeria,Metrozion,Metrozion Integrated Company Ltd,private,aggregator_buyer,marketing_processing,input_supply production marketing_processing,TRUE,TRUE,TRUE,TRUE,FALSE,TRUE,FALSE,FALSE,FALSE
+Ghana,Ministry_of_gender,"Ministry of Gender, Children & Social Protection (Ghana School Feeding Program)",public,government_extension,production,production,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
+Ghana,MMAwal_Company_Limited,MMAwal Company Limited,private,aggregator_buyer,marketing_processing,marketing_processing,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
+Ghana,MOFA,MOFA,public,NGO,production,production policy_regulation,NA,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,TRUE
+Ghana,MOFA_Kpeve_Agric_Station,MOFA Kpeve Agric Station,public,government_digital_advisory,production,production,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
+Tanzania,Bagamoyo_District_Council,Bagamoyo District Council,public,government_extension,production,input_supply production financial_services,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,TRUE,FALSE,FALSE
+Tanzania,Minjingu,Minjingu,private,fertilizer_company,input_supply,input_supply production,TRUE,NA,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
+Nigeria,Mortool_Venture,Mortool Venture,private,agrochemical_company,input_supply,input_supply production,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
+Nigeria,Multifacet_Dynamic_Global_Ventures_Delta,Multifacet Dynamic Global Ventures Delta,public,NGO,production,production,TRUE,TRUE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
+Nigeria,NAERLS,NAERLS,public,government_extension,production,production,TRUE,TRUE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
+Nigeria,National_agroinput_dealers_of_Nigeria_Benue_chapter,National agroinput dealers of Nigeria (NAIDA) Benue chapter,private,agrochemical_company,input_supply,input_supply,NA,NA,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+Nigeria,National_Cassava_Growers_Association_Delta_State,"National Cassava Growers Association, Delta State",public,farmer_association,production,production,NA,NA,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
+Nigeria,Ndi_Ole_FMCS,Ndi Ole FMCS,public,NGO,production,production,NA,NA,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
+Nigeria,Network_of_Women_and_Youth_in_Agriculture,Network of Women and Youth in Agriculture,public,farmer_association,production,production,NA,NA,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
+Nigeria,Notore,Notore,private,fertilizer_company,input_supply,input_supply,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+Nigeria,Network_of_Women_in_Agriculture,Network of Women in Agriculture,public,farmer_association,production,production,TRUE,TRUE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
+Nigeria,NFHL_ADP,NFHL & ADP,public,government_digital_advisory,digital_services,production digital_services,NA,NA,FALSE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE
+Tanzania,Mkuranga_District_Council,Mkuranga District Council,public,government_extension,production,production marketing_processing,TRUE,TRUE,FALSE,TRUE,FALSE,TRUE,FALSE,FALSE,FALSE
+Nigeria,NISL,NISL,private,agrochemical_company,input_supply,input_supply production,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
+Nigeria,NKALAFOR_ECHARA_FMCS,NKALAFOR ECHARA FMCS,public,farmer_association,digital_services,production digital_services,FALSE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE
+Nigeria,NRCRI,NRCRI,public,research_institute,research,input_supply production research policy_regulation,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,TRUE,TRUE
+Nigeria,OAU,OAU,public,research_institute,research,production research,TRUE,TRUE,FALSE,TRUE,FALSE,FALSE,FALSE,TRUE,FALSE
+Nigeria,OCP,OCP,private,fertilizer_company,input_supply,input_supply,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+Ghana,Odometa_Agric_Estates_Limited,Odometa Agric Estates Limited,public,farmer_association,production,production financial_services,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,TRUE,FALSE,FALSE
+Nigeria,OGADEP,OGADEP,public,government_extension,production,production,TRUE,TRUE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
+Nigeria,Ogbuorji_Farm_Ltd,Ogbuorji Farm Ltd,private,local_processor,marketing_processing,production marketing_processing,TRUE,TRUE,FALSE,TRUE,FALSE,TRUE,FALSE,FALSE,FALSE
+Nigeria,OGSAIDA,OGSAIDA,private,agrochemical_company,input_supply,input_supply,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+Nigeria,Oji_river_farmers_association,Oji river farmers association,public,farmer_association,production,production,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
+Tanzania,Mtama_District_Council,Mtama District Council,public,government_extension,production,input_supply production,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
+Nigeria,Okogbuedu_farmers_mcs,Okogbuedu farmers mcs,public,farmer_association,production,production,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
+Nigeria,Omala_cassava_farmers_association,Omala cassava farmers association,public,farmer_association,production,production,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
+Nigeria,Ondo_ADP,Ondo ADP,public,government_extension,production,production,TRUE,TRUE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
+Nigeria,Onelife_Initiative,Onelife Initiative,public,NGO,production,production,TRUE,TRUE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
+Ghana,Onuado_Cooperative_Farmers_Society,Onuado Cooperative Farmers Society,public,farmer_association,financial_services,production financial_services,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,TRUE,FALSE,FALSE
+Nigeria,OOAO,OOAO,public,NGO,production,production,NA,NA,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
+Nigeria,OSCD,OSCD,public,NGO,production,production,TRUE,TRUE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
+Nigeria,OSSADEP,OSSADEP,public,government_extension,production,production,NA,NA,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
+Nigeria,OYMA_RD,OYMA&RD,public,government_extension,production,production,TRUE,TRUE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
+Nigeria,Oyo_Ifelodun,Oyo Ifelodun Cassava Processing Cooperative and Credit Society Limited (CICS),public,farmer_association,financial_services,input_supply production marketing_processing financial_services,TRUE,TRUE,TRUE,TRUE,FALSE,TRUE,TRUE,FALSE,FALSE
+Tanzania,Mtwara_District_Council,Mtwara District Council,public,government_extension,production,input_supply production,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
+Nigeria,OYSADEP,OYSADEP,public,government_extension,production,production,TRUE,TRUE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
+Nigeria,OYSCGA,OYSCGA,public,farmer_association,production,input_supply production marketing_processing,TRUE,TRUE,TRUE,TRUE,FALSE,TRUE,FALSE,FALSE,FALSE
+Nigeria,Pavillah_Agricultural_Services,Pavillah Agricultural Services,private,agrochemical_company,production,input_supply production,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
+Nigeria,Peace_Corps,Peace_Corps,public,government_extension,production,production,TRUE,TRUE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
+Nigeria,Perfect_Impact,Perfect Impact,private,local_processor,marketing_processing,marketing_processing,TRUE,TRUE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
+Nigeria,PIND,PIND,public,NGO,production,production,NA,NA,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
+Nigeria,Plough_Nigeria_Network_Ltd,Plough Nigeria Network Ltd,private,local_processor,marketing_processing,production marketing_processing,FALSE,FALSE,FALSE,TRUE,FALSE,TRUE,FALSE,FALSE,FALSE
+Nigeria,Premium_Cassava_Products_LTD,Premium Cassava Products LTD,private,local_processor,marketing_processing,marketing_processing,NA,NA,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
+Nigeria,Promise_Point,Promise Point,private,processing_factory,marketing_processing,production marketing_processing,TRUE,TRUE,FALSE,TRUE,FALSE,TRUE,FALSE,FALSE,FALSE
+Nigeria,Psaltry,Psaltry,private,processing_factory,marketing_processing,production marketing_processing financial_services,TRUE,TRUE,FALSE,TRUE,FALSE,TRUE,TRUE,FALSE,FALSE
+Tanzania,Musoma_District_Council,Musoma District Council,public,government_extension,production,input_supply production,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
+Nigeria,RHEMA_LIBERTY_HOUSE_FOUNDATION,RHEMA LIBERTY HOUSE FOUNDATION,public,NGO,production,production,NA,NA,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
+Nigeria,Rivers_Cassava_Processing_Company,Rivers Cassava Processing Company,private,local_processor,marketing_processing,production marketing_processing,NA,NA,FALSE,TRUE,FALSE,TRUE,FALSE,FALSE,FALSE
+Nigeria,SAPEC_Liberia,SAPEC Liberia,public,NGO,production,production,TRUE,TRUE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
+Nigeria,SARO,SARO,private,agrochemical_company,input_supply,input_supply production,NA,NA,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
+Nigeria,SBZ_Development,SBZ Development,public,NGO,production,production,NA,NA,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
+Nigeria,Segson_Industrial,Segson Industrial,private,aggregator_buyer,marketing_processing,production marketing_processing,TRUE,TRUE,FALSE,TRUE,FALSE,TRUE,FALSE,FALSE,FALSE
+Nigeria,SG2000,SG2000,public,NGO,production,production,TRUE,TRUE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
+Ghana,Sky3_Investment_Ltd,Sky 3 Investment Ltd,private,aggregator_buyer,marketing_processing,marketing_processing,NA,NA,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
+Nigeria,SLIDEN,SLIDEN,private,agrochemical_company,input_supply,input_supply production,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
+Nigeria,SOLADUKE_AGRO_ALLIED_VENTURES,SOLADUKE AGRO ALLIED VENTURES,private,agrochemical_company,input_supply,input_supply production,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
+Tanzania,Nachingwea_District_Council,Nachingwea District Council,public,government_extension,production,input_supply production,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
+Nigeria,Standia_Uzziah_Big_Ltd,Standia Uzziah Big Ltd,private,aggregator_buyer,marketing_processing,marketing_processing,NA,NA,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
+Nigeria,Sterling_Bank,Sterling Bank,private,bank,financial_services,financial_services,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE
+Nigeria,SUFAN,SUFAN(JDPM)Kwara,public,NGO,production,production,TRUE,TRUE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
+Nigeria,Syngenta_Foundation,Syngenta Foundation,private,agrochemical_company,input_supply,input_supply production,NA,NA,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
+Nigeria,Thai_Agro_and_Allied_Industries_Limited,Thai Agro and Allied Industries Limited,private,local_processor,marketing_processing,marketing_processing,NA,NA,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
+Nigeria,THE_ARABLE_TREE_CROPS_FARMER_ASSOCIATION_OF_NIGERIA,THE ARABLE TREE CROPS FARMER ASSOCIATION OF NIGERIA,public,farmer_association,production,production,TRUE,TRUE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
+Nigeria,Tosmat,Tosmat,private,local_processor,marketing_processing,marketing_processing,TRUE,TRUE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
+Nigeria,Tractor_Owners_and_Operators_Association,Tractor Owners and Operators Association,private,mechanisation_services,input_supply,input_supply,TRUE,NA,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+Nigeria,Tremma_Agro_Services,Tremma Agro Services,private,agrochemical_company,input_supply,input_supply,NA,NA,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+Ghana,Tropical_Starch_Company_Ltd,Tropical Starch Company Ltd.,private,processing_factory,marketing_processing,marketing_processing,TRUE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
+Tanzania,Newala_District_Council,Newala District Council,public,government_extension,production,input_supply production,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
+Ghana,Tuobodom_Gari_Processors,Tuobodom Gari Processors,private,local_processor,marketing_processing,marketing_processing,NA,NA,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
+Nigeria,Unity_Bank,Unity Bank,private,bank,financial_services,financial_services,NA,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE
+Ghana,Vankharis,Vankharis,private,processing_factory,marketing_processing,marketing_processing,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
+Nigeria,VCDP_IFAD,VCDP/IFAD,public,NGO,production,production,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
+Nigeria,Von_Food,Von Food,private,processing_factory,marketing_processing,production marketing_processing,TRUE,FALSE,FALSE,TRUE,FALSE,TRUE,FALSE,FALSE,FALSE
+Nigeria,WAIDA_Ondo,WAIDA Ondo,private,agrochemical_company,input_supply,input_supply production,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
+Nigeria,WeFarms,WeFarms,private,aggregator_buyer,marketing_processing,marketing_processing,NA,NA,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
+Ghana,West_Africa_Market_links_Limited,West Africa Market links Limited,private,local_processor,marketing_processing,marketing_processing,NA,NA,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
+Nigeria,Westlink_Integrated_Agricultural_Ltd,Westlink Integrated Agricultural Ltd,private,local_processor,marketing_processing,marketing_processing,TRUE,TRUE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
+Nigeria,Women_in_Agriculture_Kogi,Women in Agriculture Kogi,public,farmer_association,production,production,NA,NA,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
+Tanzania,Nyasa_District_Council,Nyasa District Council,public,government_extension,production,production,TRUE,NA,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
+Nigeria,Zadoklink_Global_Limited,Zadoklink Global Limited,private,aggregator_buyer,marketing_processing,marketing_processing,TRUE,TRUE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
+Nigeria,Zowasel,Zowasel,private,aggregator_buyer,marketing_processing,marketing_processing,TRUE,TRUE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
+Tanzania,ABM_Consulting_Agency,ABM Consulting Agency,private,private_extension,production,production,TRUE,TRUE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
+Nigeria,OYSLGSC,OYO STATE LOCAL GOVERNMENT SERVICE COMMISSION,public,government_extension,production,production,FALSE,TRUE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
+Tanzania,Sengerema_District_Council,Sengerema District Council,public,government_extension,production,production,TRUE,TRUE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
+Tanzania,Shamba_Initiatives,Shamba Initiatives,private,seed_company,input_supply,input_supply production marketing_processing,TRUE,TRUE,TRUE,TRUE,FALSE,TRUE,FALSE,FALSE,FALSE
+Tanzania,Biharamulo_District_Council,Biharamulo District Council,public,government_extension,production,input_supply production financial_services,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,TRUE,FALSE,FALSE
+Tanzania,TACAPPA,TACAPPA,public,farmer_association,marketing_processing,production marketing_processing,TRUE,TRUE,FALSE,TRUE,FALSE,TRUE,FALSE,FALSE,FALSE
+Tanzania,TARI,TARI,public,research_institute,research,production research,TRUE,TRUE,FALSE,TRUE,FALSE,FALSE,FALSE,TRUE,FALSE
+Tanzania,Tunduru_District_Council,Tunduru District Council,public,government_extension,production,production,TRUE,TRUE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
+Tanzania,TYEGD,TYEGD,public,NGO,production,production marketing_processing financial_services,TRUE,TRUE,FALSE,TRUE,FALSE,TRUE,TRUE,FALSE,FALSE
+Tanzania,Ukerewe_District_Council,Ukerewe District Council,public,government_extension,production,production,TRUE,TRUE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
+Tanzania,Uvinza_District_Council,Uvinza District Council,public,government_extension,production,production,TRUE,NA,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
+Tanzania,Wete_District_Council,Wete District Council,public,government_extension,production,production,TRUE,TRUE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
+Tanzania,YARA,YARA,private,fertilizer_company,input_supply,input_supply production,TRUE,NA,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
+Tanzania,ZARI,ZARI,public,research_institute,research,production research,TRUE,TRUE,FALSE,TRUE,FALSE,FALSE,FALSE,TRUE,FALSE
+Nigeria,2Scale,2Scale,public,NGO,production,production,TRUE,TRUE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
+Tanzania,Bunda_District_Council,Bunda District Council,public,government_extension,production,input_supply production financial_services,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,TRUE,FALSE,FALSE
+Nigeria,365FARMS,365FARMS,private,processing_factory,marketing_processing,marketing_processing,TRUE,TRUE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
+Nigeria,ADP_Rivers,ADP Rivers,public,government_extension,production,production,TRUE,TRUE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
+Nigeria,AFAN_Ekiti,AFAN Ekiti,public,farmer_association,production,input_supply production,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
+Nigeria,AFAN_Osun,AFAN Osun,public,NGO,production,input_supply production,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
+Nigeria,Afri_Farm_Sync,Afri Farm Sync,public,NGO,production,input_supply production marketing_processing financial_services,TRUE,TRUE,TRUE,TRUE,FALSE,TRUE,TRUE,FALSE,FALSE
+Nigeria,African_Youth_Entrepreneurs_Network,African Youth Entrepreneurs Network,public,NGO,production,input_supply production,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
+Nigeria,Afrifarm_and_Seeders_Ltd,Afrifarm and Seeders Ltd,private,seed_company,input_supply,input_supply production,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
+Nigeria,Agbekoya_Farmers,Agbekoya Farmers Association Owerri,public,NGO,production,production,TRUE,TRUE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
+Nigeria,AGRECO_Shift,AGRECO Shift,public,NGO,production,input_supply production,TRUE,NA,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
+Nigeria,Ahangba_Life_Helpers_Initiatives,Ahangba Life Helpers Initiatives,public,NGO,production,production,TRUE,NA,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
+Tanzania,CAPAFO,CAPAFO,public,NGO,production,production marketing_processing,TRUE,TRUE,FALSE,TRUE,FALSE,TRUE,FALSE,FALSE,FALSE
+Nigeria,AKANCHAWA_FMCS,AKANCHAWA FMCS,public,farmer_association,financial_services,input_supply production marketing_processing financial_services,TRUE,NA,TRUE,TRUE,FALSE,TRUE,TRUE,FALSE,FALSE
+Nigeria,Akrofrom,Akrofrom Gari Processors,private,local_processor,marketing_processing,marketing_processing,NA,NA,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
+Nigeria,ALAFRIKIY_Agro_Allied_and_Services_Ltd,ALAFRIKIY Agro Allied and Services Ltd,private,agrochemical_company,input_supply,input_supply production,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
+Nigeria,AMREC,AMREC,public,university,production,production,TRUE,TRUE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
+Nigeria,Animal_Research_Institute,Animal Research Institute,public,research_institute,research,research,NA,NA,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE
+Nigeria,APPEALS,APPEALS (World Bank Project),public,NGO,production,production,NA,NA,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
+Nigeria,Arable_Farmers_Coop,Arable Farmers Coop,public,farmer_association,production,input_supply production,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
+Nigeria,ASADEP,ASADEP,public,government_extension,production,production,NA,NA,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
+Ghana,Asowase_Agric,Asowase Agric Station,private,other_agroinput_company,input_supply,input_supply production,NA,NA,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
+Ghana,Assin_Dosii_Kroye,Assin Dosii Kroye Cooperative Farmers and Marketing Society,public,farmer_association,marketing_processing,production marketing_processing,NA,NA,FALSE,TRUE,FALSE,TRUE,FALSE,FALSE,FALSE
+Tanzania,Chalinze_District_Council,Chalinze District Council,public,government_extension,production,input_supply production financial_services,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,TRUE,FALSE,FALSE
+Nigeria,Agrochemical_Dealers_Benue,Association of Agrochemical Dealers Benue,private,agrochemical_company,input_supply,input_supply,NA,NA,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+Ghana,Asuogyaman_Agro,Asuogyaman Agro Industries and Processing Ltd,private,agrochemical_company,input_supply,input_supply marketing_processing,NA,NA,TRUE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
+Nigeria,AtmanCorp,AtmanCorp,private,local_processor,marketing_processing,marketing_processing,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
+Nigeria,BASF_Agro_Chemcal,BASF Agro Chemcal Ltd,private,fertilizer_company,input_supply,input_supply,NA,NA,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+Nigeria,Benizar_Investment,Benizar Investment Nig Ltd,private,aggregator_buyer,marketing_processing,marketing_processing,NA,NA,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
+Nigeria,Benue_Cassava_Farmers,Benue cassava farmers multipurpose Association,public,farmer_association,input_supply,production input_supply,NA,NA,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
+Nigeria,Bioglobal_Investment,Bioglobal investment ltd,public,NGO,input_supply,input_supply production marketing_processing,FALSE,FALSE,TRUE,TRUE,FALSE,TRUE,FALSE,FALSE,FALSE
+Ghana,BACCSOD,Bono Ahafo Catholic Cooperative Society for Development (BACCSOD),public,farmer_association,financial_services,production marketing_processing financial_services,FALSE,FALSE,FALSE,TRUE,FALSE,TRUE,TRUE,FALSE,FALSE
+Nigeria,Brunos_Enterprise_Limited,Brunos Enterprise Limited,private,aggregator_buyer,marketing_processing,production marketing_processing,TRUE,TRUE,FALSE,TRUE,FALSE,TRUE,FALSE,FALSE,FALSE
+Nigeria,Business_Support_Academy,Business Support Academy (BSA),private,cooperative_finance,financial_services,production marketing_processing financial_services,FALSE,FALSE,FALSE,TRUE,FALSE,TRUE,TRUE,FALSE,FALSE
+Tanzania,FCI,FCI,public,NGO,marketing_processing,production marketing_processing,TRUE,NA,FALSE,TRUE,FALSE,TRUE,FALSE,FALSE,FALSE
+Nigeria,Cato_Foods,Cato Foods,private,aggregator_buyer,marketing_processing,production marketing_processing,TRUE,TRUE,FALSE,TRUE,FALSE,TRUE,FALSE,FALSE,FALSE
+Nigeria,CAVAII,CAVAII,public,NGO,production,production,TRUE,TRUE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
+Nigeria,Cedro_Royal,Cedro Royal,private,aggregator_buyer,marketing_processing,production marketing_processing,TRUE,TRUE,FALSE,TRUE,FALSE,TRUE,FALSE,FALSE,FALSE
+Nigeria,CIA_GED,CIA_GED,public,NGO,production,production,TRUE,TRUE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
+Tanzania,Asteria_Commercial_Farmer,Asteria Commercial Farmer,private,local_processor,marketing_processing,production marketing_processing,FALSE,NA,FALSE,TRUE,FALSE,TRUE,FALSE,FALSE,FALSE
+Tanzania,Bure_Garden_Products,Bure Garden Products,private,local_processor,marketing_processing,production marketing_processing,FALSE,NA,FALSE,TRUE,FALSE,TRUE,FALSE,FALSE,FALSE
+Tanzania,Butiama_District_Council,Butiama District Council,public,government_extension,production,production,TRUE,NA,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
+Tanzania,Cama_Mkata,Cama Mkata,private,local_processor,marketing_processing,production marketing_processing,TRUE,TRUE,FALSE,TRUE,FALSE,TRUE,FALSE,FALSE,FALSE
+Tanzania,CAMFED,CAMFED,public,NGO,production,production marketing_processing,FALSE,NA,FALSE,TRUE,FALSE,TRUE,FALSE,FALSE,FALSE
+Tanzania,Cassava_Aggregators_SACCOS,Cassava Aggregators SACCOS,private,aggregator_buyer,marketing_processing,marketing_processing,TRUE,NA,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
+Tanzania,FJS,FJS,private,local_processor,marketing_processing,production marketing_processing,TRUE,FALSE,FALSE,TRUE,FALSE,TRUE,FALSE,FALSE,FALSE
+Tanzania,Cassava_Starch_Tanzania_Cooperation,Cassava Starch Tanzania Cooperation,private,local_processor,marketing_processing,marketing_processing,FALSE,NA,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
+Tanzania,Cassava_Women_Group,Cassava Women Group,private,local_processor,marketing_processing,marketing_processing,TRUE,TRUE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
+Tanzania,CHAWAZIWA,CHAWAZIWA,public,farmer_association,input_supply,input_supply production,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
+Tanzania,Cheigoda_Women_Group,Cheigoda Women Group,private,local_processor,marketing_processing,production marketing_processing,FALSE,NA,FALSE,TRUE,FALSE,TRUE,FALSE,FALSE,FALSE
+Tanzania,Darcanton,Darcanton,private,local_processor,marketing_processing,marketing_processing,FALSE,NA,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
+Tanzania,CSTC,CSTC,private,processing_factory,marketing_processing,marketing_processing,FALSE,NA,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
+Ghana,Coastal_Grooves,Coastal Grooves,private,other_agroinput_company,input_supply,input_supply,FALSE,NA,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+Nigeria,Community_Links,Community Links,public,NGO,production,production,TRUE,TRUE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
+Nigeria,Crest_Agro,Crest Agro,private,processing_factory,marketing_processing,marketing_processing,NA,NA,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
+Nigeria,Crop_Doctor,Crop Doctor,private,agrochemical_company,input_supply,input_supply,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+Tanzania,Handeni_District_Council,Handeni District Council,public,government_extension,production,input_supply production marketing_processing financial_services,TRUE,TRUE,TRUE,TRUE,FALSE,TRUE,TRUE,FALSE,FALSE
+Nigeria,Crop_Research_Institute,Crop Research Institute,public,research_institute,research,research,NA,NA,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE
+Nigeria,CropLife,CropLife,private,agrochemical_company,input_supply,input_supply,NA,NA,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+Nigeria,Delta_Modern_Farmers_Multicooperative_Society,Delta Modern Farmers Multicooperative Society,public,farmer_association,financial_services,production financial_services,TRUE,TRUE,FALSE,TRUE,FALSE,FALSE,TRUE,FALSE,FALSE
+Nigeria,Denkosin_Agric_Concept,Denkosin Agric Concept,private,local_processor,marketing_processing,marketing_processing,TRUE,TRUE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
+Nigeria,Eagleson,Eagleson,private,processing_factory,marketing_processing,marketing_processing,NA,NA,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
+Nigeria,Ebi_MCS,Ebi MCS,public,farmer_association,production,production,TRUE,TRUE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
+Nigeria,Edo_state_cooperative_farmers_agency,Edo state cooperative farmers agency,public,farmer_association,financial_services,production financial_services,NA,NA,FALSE,TRUE,FALSE,FALSE,TRUE,FALSE,FALSE
+Nigeria,EIFAY_Africa,EIFAY_Africa,public,NGO,production,production,NA,NA,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
+Nigeria,Enugu_State_young_farmers_association,Enugu State young farmers association,public,NGO,production,production,NA,NA,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
+Nigeria,Erlsung_Farmers_Empowerment_Limited,Erlsung Farmers Empowerment limited,public,farmer_association,production,production,NA,NA,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE

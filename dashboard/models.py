@@ -236,3 +236,14 @@ class NewExtensionAgents(models.Model):
 
     def __str__(self):
         return self.firstname + ' ' + self.lastname + ' ' + self.gender + ' ' + self.phone_no + ' ' + self.email + ' ' + self.org
+    
+
+
+class WeatherData(models.Model):
+    location = models.CharField(max_length=100)
+    temperature = models.FloatField()
+    conditions = models.CharField(max_length=50)
+    date = models.DateField()
+    
+    def __str__(self):
+        return f"{self.location} - {self.date}"
